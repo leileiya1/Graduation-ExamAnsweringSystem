@@ -4,3 +4,7 @@ spring:
     url: jdbc:mysql://localhost:3306/test
     username: root
     password: 159357
+  security:
+    jwt:
+      key: abc123
+      expire-time: 5
