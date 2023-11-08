@@ -1,0 +1,31 @@
+{
+	"dataList":[
+		{
+			"hostGroup":[],
+			"name":"backend"
+		}
+	],
+	"envList":[],
+	"headerList":[],
+	"maxDescriptionLength":-1,
+	"postScript":"",
+	"preScript":"",
+	"projectList":[
+		"backend"
+	],
+	"syncModel":{
+		"branch":"master",
+		"domain":"https://github.com",
+		"enabled":false,
+		"namingPolicy":"byDoc",
+		"owner":"",
+		"repo":"",
+		"repoUrl":"",
+		"syncAfterRun":false,
+		"token":"",
+		"type":"github"
+	},
+	"urlEncodedKeyValueList":[],
+	"urlParamsKeyValueList":[],
+	"urlSuffix":""
+}
