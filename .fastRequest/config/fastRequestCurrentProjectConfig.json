@@ -3,15 +3,27 @@
 		{
 			"hostGroup":[],
 			"name":"backend"
+		},
+		{
+			"hostGroup":[
+				{
+					"env":"local",
+					"url":"http://localhost:8080"
+				}
+			],
+			"name":"project-backend"
 		}
 	],
-	"envList":[],
+	"envList":[
+		"local"
+	],
 	"headerList":[],
 	"maxDescriptionLength":-1,
 	"postScript":"",
 	"preScript":"",
 	"projectList":[
-		"backend"
+		"backend",
+		"project-backend"
 	],
 	"syncModel":{
 		"branch":"master",

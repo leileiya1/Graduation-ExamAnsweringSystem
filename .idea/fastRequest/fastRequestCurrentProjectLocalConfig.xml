@@ -1,7 +1,15 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="fastRequestCurrentProjectLocalConfig">
-    <option name="domain" value="http://localhost:8080/" />
+    <option name="cookieList">
+      <list>
+        <DataMapping>
+          <option name="type" value="http://localhost:8080" />
+          <option name="value" value="JSESSIONID=EFCF58B7E2E8E9A6CE31204B0F4BAF72; Path" />
+        </DataMapping>
+      </list>
+    </option>
+    <option name="domain" value="http://localhost:8080" />
     <option name="enableEnv" value="local" />
     <option name="enableProject" value="project-backend" />
     <option name="initFlag" value="1" />
