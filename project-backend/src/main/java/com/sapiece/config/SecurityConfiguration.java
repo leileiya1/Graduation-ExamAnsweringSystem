@@ -1,13 +1,16 @@
 package com.sapiece.config;
 
 import com.sapiece.entity.RestBean;
+import com.sapiece.entity.dto.Account;
 import com.sapiece.entity.vo.response.AuthorizeVO;
 import com.sapiece.filter.JwtAuthorizeFilter;
+import com.sapiece.user.service.AccountService;
 import com.sapiece.util.JwtUtils;
 import jakarta.annotation.Resource;
 import jakarta.servlet.ServletException;
 import jakarta.servlet.http.HttpServletRequest;
 import jakarta.servlet.http.HttpServletResponse;
+import org.springframework.beans.BeanUtils;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.security.access.AccessDeniedException;
@@ -39,6 +42,8 @@ public class SecurityConfiguration {
     JwtUtils jwtUtils;
     @Resource
     JwtAuthorizeFilter jwtAuthorizeFilter;
+    @Resource
+    AccountService accountService;
     @Bean
     public SecurityFilterChain filterChain(HttpSecurity http) throws Exception {
         return http.authorizeHttpRequests(config -> config
@@ -69,12 +74,13 @@ public class SecurityConfiguration {
         response.setCharacterEncoding("utf-8");
     response.setContentType("application/json;utf-8");
         User user = (User) authentication.getPrincipal();
-        String token=jwtUtils.createJwt(user,1,"小米");
+        Account account = accountService.findByUsernameOrEmail(user.getUsername());
+        String token=jwtUtils.createJwt(user,account.getUserId(),account.getUsername());
         AuthorizeVO vo = new AuthorizeVO();
         vo.setExpire(jwtUtils.expireTime());
-        vo.setRole("1");
+        vo.setRole(account.getRole());
         vo.setToken(token);
-        vo.setUsername("小米");
+        vo.setUsername(account.getUsername());
         response.getWriter().write(RestBean.success(vo).asJsonString());
     }
     public void onAuthenticationFailure(HttpServletRequest request,

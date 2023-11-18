@@ -41,9 +41,8 @@ public class JwtAuthorizeFilter extends OncePerRequestFilter {
                     new UsernamePasswordAuthenticationToken(user,null,user.getAuthorities());
             authentication.setDetails(new WebAuthenticationDetailsSource().buildDetails(request));
             SecurityContextHolder.getContext().setAuthentication(authentication);
-            //request.setAttribute("id",utils.toId(jwt));
-            //HttpSession session = request.getSession();
-            //session.setAttribute("id",utils.toId(jwt));
+            HttpSession session = request.getSession();
+            session.setAttribute("id",utils.toId(jwt));
         }
         filterChain.doFilter(request,response);
     }
