@@ -1,5 +1,5 @@
 import './assets/main.css'
-
+import './request/request'
 import { createApp } from 'vue'
 import { createPinia } from 'pinia'
 

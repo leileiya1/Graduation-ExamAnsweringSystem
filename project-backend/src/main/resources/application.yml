@@ -14,3 +14,5 @@ spring:
       host: 6379
       username: root
       password: 159357
+mybatis-plus:
+  type-aliases-package: com.sapiece.entity.dto
