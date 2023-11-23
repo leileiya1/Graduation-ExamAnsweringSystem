@@ -19,11 +19,12 @@ import lombok.NoArgsConstructor;
 @NoArgsConstructor
 @AllArgsConstructor
 @TableName("questions")
-public class Questions {
-    @TableId(type = IdType.AUTO)
+public class Question {
+    @TableId(type = IdType.AUTO,value = "question_id")
     private Integer questionId;
     private String type;
     private String content;
     private String options;
     private String answer;
+    private Boolean isSelected;
 }

@@ -22,5 +22,5 @@ import lombok.NoArgsConstructor;
 public class ExamQuestions {
     @TableId(type = IdType.AUTO)
     private Exams examId;
-    private Questions questionId;
+    private Question questionId;
 }

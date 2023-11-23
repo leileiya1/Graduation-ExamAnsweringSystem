@@ -1,8 +1,11 @@
 package com.sapiece.question.mapper;
 
 import com.baomidou.mybatisplus.core.mapper.BaseMapper;
-import com.sapiece.entity.dto.Questions;
+import com.sapiece.entity.dto.Question;
 import org.apache.ibatis.annotations.Mapper;
+import org.apache.ibatis.annotations.Param;
+
+import java.util.List;
 
 /**
  * @Author SAPiece
@@ -13,5 +16,6 @@ import org.apache.ibatis.annotations.Mapper;
  * @Version 1.0
  */
 @Mapper
-public interface QuestionsMapper extends BaseMapper<Questions> {
+public interface QuestionMapper extends BaseMapper<Question> {
+    void batchUpdateIsSelected(@Param("questionIds") List<Integer> questionIds, @Param("isSelected") boolean isSelected);
 }

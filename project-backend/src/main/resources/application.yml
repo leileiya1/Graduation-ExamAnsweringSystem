@@ -16,3 +16,4 @@ spring:
       password: 159357
 mybatis-plus:
   type-aliases-package: com.sapiece.entity.dto
+  mapper-locations: classpath:mybatis-plus/mapping/*.xml

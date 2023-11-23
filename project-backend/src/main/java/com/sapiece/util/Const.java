@@ -11,4 +11,8 @@ package com.sapiece.util;
 public class Const {
     public static final String JWT_BLACK_LIST="jwt:blacklist";
     public static final int ORDER_CORS=-102;
+    public static final int FILL_IN_THE_BLANK=5;
+    public static final int ESSAY=6;
+    public static final int MULTIPLE_CHOICE =4;
+    public static final int SINGLE_CHOICE =8;
 }
