@@ -8,6 +8,7 @@ import com.sapiece.question.service.QuestionService;
 import com.sapiece.util.Const;
 import jakarta.annotation.Resource;
 import org.springframework.stereotype.Service;
+import org.springframework.transaction.annotation.Transactional;
 
 import java.util.*;
 import java.util.stream.Collectors;
@@ -75,11 +76,12 @@ public class QuestionServiceImpl extends ServiceImpl<QuestionMapper, Question> i
     /**
      * 批量更新题目状态为已选。
      * @param questions 题目列表。
+     * 后面传入是否考试字段进行打乱不能相同直接加一个判断把isSelected设置为true即可
      */
     public void markQuestionsAsSelected(List<Question> questions) {
         List<Integer> questionIds = questions.stream().map(Question::getQuestionId).collect(Collectors.toList());
         if (!questionIds.isEmpty()) {
-            questionMapper.batchUpdateIsSelected(questionIds,true);
+            questionMapper.batchUpdateIsSelected(questionIds,false);
         }
     }
 
@@ -91,13 +93,25 @@ public class QuestionServiceImpl extends ServiceImpl<QuestionMapper, Question> i
     public void randomizeOptionsAndAnswers(List<Question> questions, boolean isMultipleChoice) {
         for (Question question : questions) {
             if (question.getOptions() != null && !question.getOptions().isEmpty()) {
-                List<String> optionsList = new ArrayList<>(Arrays.asList(question.getOptions().split("，")));
-                Collections.shuffle(optionsList);
+                // 分割选项，并保留标签（如 A, B, C, D）
+                List<String> optionsList = new ArrayList<>(Arrays.asList(question.getOptions().split(",")));
+
+                // 只随机化答案文本部分，保留标签顺序
+                List<String> shuffledAnswers = optionsList.stream()
+                        .map(opt -> opt.substring(opt.indexOf('.') + 1).trim())
+                        .collect(Collectors.toList());
+                Collections.shuffle(shuffledAnswers);
+
+                // 重新组合标签和随机化的答案文本
+                for (int i = 0; i < optionsList.size(); i++) {
+                    String label = optionsList.get(i).substring(0, optionsList.get(i).indexOf('.')).trim();
+                    optionsList.set(i, label + "." + shuffledAnswers.get(i));
+                }
 
                 Map<String, String> answerMap = createAnswerMap(optionsList);
                 question.setAnswer(updateCorrectAnswer(answerMap, question.getAnswer(), isMultipleChoice));
 
-                String shuffledOptions = String.join("，", optionsList);
+                String shuffledOptions = String.join(",", optionsList);
                 question.setOptions(shuffledOptions);
             }
         }
@@ -111,8 +125,9 @@ public class QuestionServiceImpl extends ServiceImpl<QuestionMapper, Question> i
     public Map<String, String> createAnswerMap(List<String> options) {
         Map<String, String> answerMap = new HashMap<>();
         for (String option : options) {
-            String key = option.substring(0, option.indexOf('.')).trim();
-            String value = option.substring(option.indexOf('.') + 1).trim();
+            String[] parts = option.split("\\.", 2);
+            String key = parts[0].trim(); // 选项标签，如 "A"
+            String value = parts[1].trim(); // 答案文本，如 "答案一"
             answerMap.put(value, key);
         }
         return answerMap;
@@ -133,6 +148,7 @@ public class QuestionServiceImpl extends ServiceImpl<QuestionMapper, Question> i
                     .map(String::trim) // 去除空格
                     .map(answerMap::get) // 映射到标签
                     .filter(Objects::nonNull) // 过滤空值
+                    .sorted() // 根据标签顺序排序答案
                     .collect(Collectors.joining("."));
         } else {
             // 单选题：答案是单个答案文本

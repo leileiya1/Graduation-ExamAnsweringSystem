@@ -4,6 +4,131 @@
     <option name="historyList">
       <list>
         <ResponseHistory>
+          <option name="className" value="com.sapiece.question.controller.QuestionController" />
+          <option name="code" value="200" />
+          <option name="enableEnv" value="local" />
+          <option name="enableProject" value="project-backend" />
+          <option name="method" value="fetchQuestions" />
+          <option name="methodType" value="GET" />
+          <option name="paramGroup">
+            <ParamGroupCollection>
+              <option name="className" value="com.sapiece.question.controller.QuestionController" />
+              <option name="method" value="fetchQuestions" />
+              <option name="methodDescription" value="fetchQuestions" />
+              <option name="multipartKeyValueListJson" value="[]" />
+              <option name="originUrl" value="/api/question/fetch" />
+              <option name="pathParamsKeyValueListJson" value="[]" />
+              <option name="returnDocument" value="{&quot;status&quot;:{},&quot;headers&quot;:{},&quot;body&quot;:{}}" />
+              <option name="url" value="/api/question/fetch" />
+              <option name="urlEncodedKeyValueListJson" value="[]" />
+              <option name="urlParamsKeyValueListJson" value="[]" />
+            </ParamGroupCollection>
+          </option>
+          <option name="requestInfo" value="Request Url: http://localhost:8080/api/question/fetch&#13;&#10;Request Headers: &#13;&#10;    Authorization: Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJuYW1lIjoic2FwaWVjZSIsImlkIjoxLCJleHAiOjE3MDExNjI3NzgsImlhdCI6MTcwMDczMDc3OCwianRpIjoiZWViOGEzN2UtMzA4Yi00YjUyLWE2ZjktOWNiMjAxNjNiNmU0IiwiYXV0aG9yaXRpZXMiOlsiUk9MRV9hZG1pbiJdfQ.JveaPa3_bKDrcsJtJX3sWxMrLovbPQIdUXn1GJVsSs8&#13;&#10;    Accept: application/json,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8&#13;&#10;    User-Agent: Restful Fast Request/2023.2.1.3&#13;&#10;    Accept-Encoding: gzip, deflate&#13;&#10;Request Body: &#13;&#10;    null&#13;&#10;" />
+          <option name="response" value="[{&quot;questionId&quot;:47,&quot;type&quot;:&quot;single_choice&quot;,&quot;content&quot;:&quot;通常情况下，下列哪种葡萄酒是在橡木桶中陈年？&quot;,&quot;options&quot;:&quot;A.波尔多,B.霞多丽,C.普罗塞克,D.皮诺·诺瓦尔&quot;,&quot;answer&quot;:&quot;B&quot;,&quot;isSelected&quot;:false},{&quot;questionId&quot;:1,&quot;type&quot;:&quot;single_choice&quot;,&quot;content&quot;:&quot;波特酒主要生产于哪个国家？&quot;,&quot;options&quot;:&quot;A.法国,B.意大利,C.葡萄牙,D.西班牙&quot;,&quot;answer&quot;:&quot;C&quot;,&quot;isSelected&quot;:false},{&quot;questionId&quot;:88,&quot;type&quot;:&quot;single_choice&quot;,&quot;content&quot;:&quot;白兰地是通过蒸馏哪种饮料制成的？&quot;,&quot;options&quot;:&quot;A.啤酒,B.葡萄酒,C.米酒,D.苹果汁&quot;,&quot;answer&quot;:&quot;B&quot;,&quot;isSelected&quot;:false},{&quot;questionId&quot;:63,&quot;type&quot;:&quot;single_choice&quot;,&quot;content&quot;:&quot;下列哪种葡萄酒被称为'夜之女王'，是德国著名的甜白葡萄酒？&quot;,&quot;options&quot;:&quot;A.冰酒,B.格瓦茨特拉明,C.霞多丽,D.雷司令&quot;,&quot;answer&quot;:&quot;D&quot;,&quot;isSelected&quot;:false},{&quot;questionId&quot;:39,&quot;type&quot;:&quot;single_choice&quot;,&quot;content&quot;:&quot;在制作波尔多葡萄酒时，通常使用的主要葡萄品种是什么？&quot;,&quot;options&quot;:&quot;A.霞多丽,B.默洛,C.赤霞珠,D.佳美&quot;,&quot;answer&quot;:&quot;C&quot;,&quot;isSelected&quot;:false},{&quot;questionId&quot;:12,&quot;type&quot;:&quot;single_choice&quot;,&quot;content&quot;:&quot;下列哪种酒是由稻米酿造的？&quot;,&quot;options&quot;:&quot;A.清酒,B.朗姆酒,C.白兰地,D.伏特加&quot;,&quot;answer&quot;:&quot;A&quot;,&quot;isSelected&quot;:false},{&quot;questionId&quot;:87,&quot;type&quot;:&quot;single_choice&quot;,&quot;content&quot;:&quot;下列哪种葡萄酒通常以干型和半干型最为著名？&quot;,&quot;options&quot;:&quot;A.雷司令,B.霞多丽,C.赤霞珠,D.佳美&quot;,&quot;answer&quot;:&quot;A&quot;,&quot;isSelected&quot;:false},{&quot;questionId&quot;:64,&quot;type&quot;:&quot;single_choice&quot;,&quot;content&quot;:&quot;马尔贝克是哪个国家特有的葡萄酒品种？&quot;,&quot;options&quot;:&quot;A.南非,B.意大利,C.智利,D.阿根廷&quot;,&quot;answer&quot;:&quot;D&quot;,&quot;isSelected&quot;:false},{&quot;questionId&quot;:50,&quot;type&quot;:&quot;multiple_choice&quot;,&quot;content&quot;:&quot;在葡萄酒制作过程中，哪些步骤被认为至关重要？&quot;,&quot;options&quot;:&quot;A.发酵,B.瓶装,C.过滤,D.搾汁&quot;,&quot;answer&quot;:&quot;A.C.D&quot;,&quot;isSelected&quot;:false},{&quot;questionId&quot;:14,&quot;type&quot;:&quot;multiple_choice&quot;,&quot;content&quot;:&quot;下列哪些因素对葡萄酒的品质有显著影响？&quot;,&quot;options&quot;:&quot;A.葡萄的成熟度,B.阳光照射,C.发酵容器,D.酒标设计&quot;,&quot;answer&quot;:&quot;A.B.C&quot;,&quot;isSelected&quot;:false},{&quot;questionId&quot;:74,&quot;type&quot;:&quot;multiple_choice&quot;,&quot;content&quot;:&quot;以下哪些方法被用于增加葡萄酒的复杂性和口感深度？&quot;,&quot;options&quot;:&quot;A.酵母接触,B.冷温发酵,C.橡木桶陈年,D.瓶内陈年&quot;,&quot;answer&quot;:&quot;A.C.D&quot;,&quot;isSelected&quot;:false},{&quot;questionId&quot;:41,&quot;type&quot;:&quot;multiple_choice&quot;,&quot;content&quot;:&quot;下列哪些特性通常用于描述葡萄酒的香气？&quot;,&quot;options&quot;:&quot;A.矿物质,B.草本,C.水果,D.花香&quot;,&quot;answer&quot;:&quot;A.B.C.D&quot;,&quot;isSelected&quot;:false},{&quot;questionId&quot;:25,&quot;type&quot;:&quot;fill_in_the_blank&quot;,&quot;content&quot;:&quot;_________ 是一种在酒瓶中进行二次发酵的过程，通常用于生产某些类型的起泡酒。&quot;,&quot;options&quot;:null,&quot;answer&quot;:&quot;瓶内二次发酵&quot;,&quot;isSelected&quot;:false},{&quot;questionId&quot;:16,&quot;type&quot;:&quot;fill_in_the_blank&quot;,&quot;content&quot;:&quot;_________ 是一种法国红葡萄酒，以其深色和丰富的单宁而闻名。&quot;,&quot;options&quot;:null,&quot;answer&quot;:&quot;梅洛&quot;,&quot;isSelected&quot;:false},{&quot;questionId&quot;:91,&quot;type&quot;:&quot;fill_in_the_blank&quot;,&quot;content&quot;:&quot;_________ 是指葡萄酒中的单宁和其他化合物随时间的演变而逐渐融合的过程。&quot;,&quot;options&quot;:null,&quot;answer&quot;:&quot;软化&quot;,&quot;isSelected&quot;:false},{&quot;questionId&quot;:92,&quot;type&quot;:&quot;fill_in_the_blank&quot;,&quot;content&quot;:&quot;在葡萄酒的世界里，_________ 通常用来描述那些具有鲜明、浓烈果香的葡萄酒。&quot;,&quot;options&quot;:null,&quot;answer&quot;:&quot;果味浓郁&quot;,&quot;isSelected&quot;:false},{&quot;questionId&quot;:68,&quot;type&quot;:&quot;fill_in_the_blank&quot;,&quot;content&quot;:&quot;_________ 是用于描述葡萄酒中干草、土壤等气味的术语，常见于陈年葡萄酒。&quot;,&quot;options&quot;:null,&quot;answer&quot;:&quot;泥土香&quot;,&quot;isSelected&quot;:false},{&quot;questionId&quot;:53,&quot;type&quot;:&quot;essay&quot;,&quot;content&quot;:&quot;简述冰酒的特点和制作过程。&quot;,&quot;options&quot;:null,&quot;answer&quot;:&quot;冰酒是一种甜葡萄酒，由在自然冰冻条件下采摘的葡萄制成。这些葡萄在冰冻时被压榨，从而产生高糖分的汁液。冰酒的特点是浓郁的甜度和新鲜的酸度平衡。&quot;,&quot;isSelected&quot;:false},{&quot;questionId&quot;:18,&quot;type&quot;:&quot;essay&quot;,&quot;content&quot;:&quot;解释‘葡萄酒单宁’的来源和作用。&quot;,&quot;options&quot;:null,&quot;answer&quot;:&quot;葡萄酒中的单宁主要来源于葡萄皮、籽和橡木桶。它为葡萄酒提供结构，赋予苦涩感，有助于葡萄酒的陈年潜力。&quot;,&quot;isSelected&quot;:false},{&quot;questionId&quot;:46,&quot;type&quot;:&quot;essay&quot;,&quot;content&quot;:&quot;简述葡萄酒陈年过程中颜色的变化。&quot;,&quot;options&quot;:null,&quot;answer&quot;:&quot;随着陈年，红葡萄酒的颜色会从鲜艳的红色逐渐变为砖红色，而白葡萄酒则会从淡黄色变为更深的金黄色。&quot;,&quot;isSelected&quot;:false},{&quot;questionId&quot;:28,&quot;type&quot;:&quot;essay&quot;,&quot;content&quot;:&quot;描述在葡萄酒生产中，不同类型的橡木桶如何影响葡萄酒的最终风味。&quot;,&quot;options&quot;:null,&quot;answer&quot;:&quot;不同的橡木桶可以赋予葡萄酒不同的风味特征。例如，美国橡木通常会带来更强烈的香草和焦糖味，而法国橡木则提供更为细腻和复杂的香气。桶的烤火程度也会影响葡萄酒的口感，更重的烤火带来更强的烤面包和烟熏味。&quot;,&quot;isSelected&quot;:false},{&quot;questionId&quot;:37,&quot;type&quot;:&quot;essay&quot;,&quot;content&quot;:&quot;描述什么是冷稳技术，以及它在葡萄酒制作中的作用。&quot;,&quot;options&quot;:null,&quot;answer&quot;:&quot;冷稳是一种通过降低温度来稳定葡萄酒的过程。它有助于去除过量的酒石酸盐晶体，防止酒瓶内形成沉淀，从而保持酒液的清澈和稳定。&quot;,&quot;isSelected&quot;:false},{&quot;questionId&quot;:78,&quot;type&quot;:&quot;essay&quot;,&quot;content&quot;:&quot;解释什么是'蒸馏酒'，以及它与葡萄酒的主要区别。&quot;,&quot;options&quot;:null,&quot;answer&quot;:&quot;蒸馏酒是通过蒸馏发酵液体制成的酒精饮料，如伏特加、白兰地和威士忌。它与葡萄酒的主要区别在于制作过程和酒精含量。葡萄酒是通过发酵葡萄汁制成，而蒸馏酒则是通过蒸馏提高酒精浓度。&quot;,&quot;isSelected&quot;:false}]" />
+          <option name="url" value="/api/question/fetch" />
+        </ResponseHistory>
+        <ResponseHistory>
+          <option name="className" value="com.sapiece.question.controller.QuestionController" />
+          <option name="code" value="200" />
+          <option name="enableEnv" value="local" />
+          <option name="enableProject" value="project-backend" />
+          <option name="method" value="fetchQuestions" />
+          <option name="methodType" value="GET" />
+          <option name="paramGroup">
+            <ParamGroupCollection>
+              <option name="className" value="com.sapiece.question.controller.QuestionController" />
+              <option name="method" value="fetchQuestions" />
+              <option name="methodDescription" value="fetchQuestions" />
+              <option name="multipartKeyValueListJson" value="[]" />
+              <option name="originUrl" value="/api/question/fetch" />
+              <option name="pathParamsKeyValueListJson" value="[]" />
+              <option name="returnDocument" value="{&quot;status&quot;:{},&quot;headers&quot;:{},&quot;body&quot;:{}}" />
+              <option name="url" value="/api/question/fetch" />
+              <option name="urlEncodedKeyValueListJson" value="[]" />
+              <option name="urlParamsKeyValueListJson" value="[]" />
+            </ParamGroupCollection>
+          </option>
+          <option name="requestInfo" value="Request Url: http://localhost:8080/api/question/fetch&#13;&#10;Request Headers: &#13;&#10;    Authorization: Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJuYW1lIjoic2FwaWVjZSIsImlkIjoxLCJleHAiOjE3MDExNjI3NzgsImlhdCI6MTcwMDczMDc3OCwianRpIjoiZWViOGEzN2UtMzA4Yi00YjUyLWE2ZjktOWNiMjAxNjNiNmU0IiwiYXV0aG9yaXRpZXMiOlsiUk9MRV9hZG1pbiJdfQ.JveaPa3_bKDrcsJtJX3sWxMrLovbPQIdUXn1GJVsSs8&#13;&#10;    Accept: application/json,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8&#13;&#10;    User-Agent: Restful Fast Request/2023.2.1.3&#13;&#10;    Accept-Encoding: gzip, deflate&#13;&#10;Request Body: &#13;&#10;    null&#13;&#10;" />
+          <option name="response" value="[{&quot;questionId&quot;:47,&quot;type&quot;:&quot;single_choice&quot;,&quot;content&quot;:&quot;通常情况下，下列哪种葡萄酒是在橡木桶中陈年？&quot;,&quot;options&quot;:&quot;A.霞多丽,B.普罗塞克,C.皮诺·诺瓦尔,D.波尔多&quot;,&quot;answer&quot;:&quot;A&quot;,&quot;isSelected&quot;:false},{&quot;questionId&quot;:32,&quot;type&quot;:&quot;single_choice&quot;,&quot;content&quot;:&quot;下列哪种葡萄酒通常是用黑皮诺（Pinot Noir）葡萄酿造的？&quot;,&quot;options&quot;:&quot;A.玫瑰葡萄酒,B.白葡萄酒,C.香槟,D.红葡萄酒&quot;,&quot;answer&quot;:&quot;C&quot;,&quot;isSelected&quot;:false},{&quot;questionId&quot;:39,&quot;type&quot;:&quot;single_choice&quot;,&quot;content&quot;:&quot;在制作波尔多葡萄酒时，通常使用的主要葡萄品种是什么？&quot;,&quot;options&quot;:&quot;A.赤霞珠,B.默洛,C.佳美,D.霞多丽&quot;,&quot;answer&quot;:&quot;A&quot;,&quot;isSelected&quot;:false},{&quot;questionId&quot;:72,&quot;type&quot;:&quot;single_choice&quot;,&quot;content&quot;:&quot;通常情况下，下列哪种葡萄酒会在瓶中进行二次发酵？&quot;,&quot;options&quot;:&quot;A.赤霞珠,B.马尔贝克,C.香槟,D.索维翁·布朗&quot;,&quot;answer&quot;:&quot;C&quot;,&quot;isSelected&quot;:false},{&quot;questionId&quot;:31,&quot;type&quot;:&quot;single_choice&quot;,&quot;content&quot;:&quot;夏布利产区以生产哪种类型的葡萄酒而闻名？&quot;,&quot;options&quot;:&quot;A.丽贝拉,B.霞多丽,C.赤霞珠,D.默洛&quot;,&quot;answer&quot;:&quot;B&quot;,&quot;isSelected&quot;:false},{&quot;questionId&quot;:12,&quot;type&quot;:&quot;single_choice&quot;,&quot;content&quot;:&quot;下列哪种酒是由稻米酿造的？&quot;,&quot;options&quot;:&quot;A.白兰地,B.伏特加,C.朗姆酒,D.清酒&quot;,&quot;answer&quot;:&quot;D&quot;,&quot;isSelected&quot;:false},{&quot;questionId&quot;:56,&quot;type&quot;:&quot;single_choice&quot;,&quot;content&quot;:&quot;通常情况下，葡萄酒中的酸度是由哪种物质主导的？&quot;,&quot;options&quot;:&quot;A.单宁,B.糖分,C.酒精,D.酒石酸&quot;,&quot;answer&quot;:&quot;D&quot;,&quot;isSelected&quot;:false},{&quot;questionId&quot;:79,&quot;type&quot;:&quot;single_choice&quot;,&quot;content&quot;:&quot;下列哪种葡萄酒通常以干型和半干型最为著名？&quot;,&quot;options&quot;:&quot;A.霞多丽,B.佳美,C.雷司令,D.赤霞珠&quot;,&quot;answer&quot;:&quot;C&quot;,&quot;isSelected&quot;:false},{&quot;questionId&quot;:57,&quot;type&quot;:&quot;multiple_choice&quot;,&quot;content&quot;:&quot;哪些条件对葡萄酒的风味和品质有显著影响？&quot;,&quot;options&quot;:&quot;A.葡萄品种,B.酿酒师的技艺,C.季节变化,D.土壤类型&quot;,&quot;answer&quot;:&quot;A.B.D&quot;,&quot;isSelected&quot;:false},{&quot;questionId&quot;:74,&quot;type&quot;:&quot;multiple_choice&quot;,&quot;content&quot;:&quot;以下哪些方法被用于增加葡萄酒的复杂性和口感深度？&quot;,&quot;options&quot;:&quot;A.酵母接触,B.瓶内陈年,C.橡木桶陈年,D.冷温发酵&quot;,&quot;answer&quot;:&quot;A.B.C&quot;,&quot;isSelected&quot;:false},{&quot;questionId&quot;:89,&quot;type&quot;:&quot;multiple_choice&quot;,&quot;content&quot;:&quot;在制作葡萄酒时，哪些步骤对于决定最终风味至关重要？&quot;,&quot;options&quot;:&quot;A.瓶装,B.葡萄的选择,C.发酵过程,D.陈年&quot;,&quot;answer&quot;:&quot;B.C.D&quot;,&quot;isSelected&quot;:false},{&quot;questionId&quot;:4,&quot;type&quot;:&quot;multiple_choice&quot;,&quot;content&quot;:&quot;以下哪些因素会影响葡萄酒的风味？&quot;,&quot;options&quot;:&quot;A.气候条件,B.酒瓶形状,C.葡萄种类,D.土壤类型&quot;,&quot;answer&quot;:&quot;A.C.D&quot;,&quot;isSelected&quot;:false},{&quot;questionId&quot;:25,&quot;type&quot;:&quot;fill_in_the_blank&quot;,&quot;content&quot;:&quot;_________ 是一种在酒瓶中进行二次发酵的过程，通常用于生产某些类型的起泡酒。&quot;,&quot;options&quot;:null,&quot;answer&quot;:&quot;瓶内二次发酵&quot;,&quot;isSelected&quot;:false},{&quot;questionId&quot;:84,&quot;type&quot;:&quot;fill_in_the_blank&quot;,&quot;content&quot;:&quot;在葡萄酒的世界里，_________ 通常用来描述那些具有鲜明、浓烈果香的葡萄酒。&quot;,&quot;options&quot;:null,&quot;answer&quot;:&quot;果味浓郁&quot;,&quot;isSelected&quot;:false},{&quot;questionId&quot;:5,&quot;type&quot;:&quot;fill_in_the_blank&quot;,&quot;content&quot;:&quot;_________ 是用来描述一种葡萄酒的香气和口感，通常指含有石灰岩或矿物质味道的白葡萄酒。&quot;,&quot;options&quot;:null,&quot;answer&quot;:&quot;矿物感&quot;,&quot;isSelected&quot;:false},{&quot;questionId&quot;:6,&quot;type&quot;:&quot;fill_in_the_blank&quot;,&quot;content&quot;:&quot;葡萄酒中的_________ 是由于酵母将葡萄汁中的糖分转化为酒精和二氧化碳而产生的。&quot;,&quot;options&quot;:null,&quot;answer&quot;:&quot;酒精&quot;,&quot;isSelected&quot;:false},{&quot;questionId&quot;:60,&quot;type&quot;:&quot;fill_in_the_blank&quot;,&quot;content&quot;:&quot;_________ 是一种葡萄酒术语，指葡萄酒中的果味和花香等风味特征。&quot;,&quot;options&quot;:null,&quot;answer&quot;:&quot;芳香复杂性&quot;,&quot;isSelected&quot;:false},{&quot;questionId&quot;:70,&quot;type&quot;:&quot;essay&quot;,&quot;content&quot;:&quot;描述霞多丽葡萄酒的典型风味特征。&quot;,&quot;options&quot;:null,&quot;answer&quot;:&quot;霞多丽葡萄酒通常具有苹果、柑橘和熟梨的果香，搭配着香草和烤面包的橡木桶香气。它的口感通常丰富，带有明显的酸度和柔滑的口感。&quot;,&quot;isSelected&quot;:false},{&quot;questionId&quot;:78,&quot;type&quot;:&quot;essay&quot;,&quot;content&quot;:&quot;解释什么是'蒸馏酒'，以及它与葡萄酒的主要区别。&quot;,&quot;options&quot;:null,&quot;answer&quot;:&quot;蒸馏酒是通过蒸馏发酵液体制成的酒精饮料，如伏特加、白兰地和威士忌。它与葡萄酒的主要区别在于制作过程和酒精含量。葡萄酒是通过发酵葡萄汁制成，而蒸馏酒则是通过蒸馏提高酒精浓度。&quot;,&quot;isSelected&quot;:false},{&quot;questionId&quot;:94,&quot;type&quot;:&quot;essay&quot;,&quot;content&quot;:&quot;解释什么是残余糖分，以及它如何影响葡萄酒的风味。&quot;,&quot;options&quot;:null,&quot;answer&quot;:&quot;残余糖分是指发酵过程中未被转化为酒精的糖分。这些糖分赋予葡萄酒一定的甜度，影响其整体口感，从干型（低残余糖分）到甜型（高残余糖分）不等。&quot;,&quot;isSelected&quot;:false},{&quot;questionId&quot;:69,&quot;type&quot;:&quot;essay&quot;,&quot;content&quot;:&quot;解释为什么葡萄酒的储存温度很重要，以及理想的储存温度范围是多少。&quot;,&quot;options&quot;:null,&quot;answer&quot;:&quot;葡萄酒的储存温度对其品质保持非常重要，因为温度变化会影响葡萄酒的成熟速度和风味。理想的储存温度一般在12-14°C，可以保持葡萄酒的稳定性和慢慢成熟。&quot;,&quot;isSelected&quot;:false},{&quot;questionId&quot;:27,&quot;type&quot;:&quot;essay&quot;,&quot;content&quot;:&quot;解释什么是'陈年潜力'，以及为何某些葡萄酒比其他的更适合陈年。&quot;,&quot;options&quot;:null,&quot;answer&quot;:&quot;陈年潜力是指葡萄酒随时间发展而改善其风味和复杂度的能力。高单宁含量、酸度和糖分的葡萄酒通常具有更好的陈年潜力，因为这些成分随时间的演变有助于葡萄酒的风味成熟。&quot;,&quot;isSelected&quot;:false},{&quot;questionId&quot;:28,&quot;type&quot;:&quot;essay&quot;,&quot;content&quot;:&quot;描述在葡萄酒生产中，不同类型的橡木桶如何影响葡萄酒的最终风味。&quot;,&quot;options&quot;:null,&quot;answer&quot;:&quot;不同的橡木桶可以赋予葡萄酒不同的风味特征。例如，美国橡木通常会带来更强烈的香草和焦糖味，而法国橡木则提供更为细腻和复杂的香气。桶的烤火程度也会影响葡萄酒的口感，更重的烤火带来更强的烤面包和烟熏味。&quot;,&quot;isSelected&quot;:false}]" />
+          <option name="url" value="/api/question/fetch" />
+        </ResponseHistory>
+        <ResponseHistory>
+          <option name="className" value="com.sapiece.question.controller.QuestionController" />
+          <option name="code" value="200" />
+          <option name="enableEnv" value="local" />
+          <option name="enableProject" value="project-backend" />
+          <option name="method" value="fetchQuestions" />
+          <option name="methodType" value="GET" />
+          <option name="paramGroup">
+            <ParamGroupCollection>
+              <option name="className" value="com.sapiece.question.controller.QuestionController" />
+              <option name="method" value="fetchQuestions" />
+              <option name="methodDescription" value="fetchQuestions" />
+              <option name="multipartKeyValueListJson" value="[]" />
+              <option name="originUrl" value="/api/question/fetch" />
+              <option name="pathParamsKeyValueListJson" value="[]" />
+              <option name="returnDocument" value="{&quot;status&quot;:{},&quot;headers&quot;:{},&quot;body&quot;:{}}" />
+              <option name="url" value="/api/question/fetch" />
+              <option name="urlEncodedKeyValueListJson" value="[]" />
+              <option name="urlParamsKeyValueListJson" value="[]" />
+            </ParamGroupCollection>
+          </option>
+          <option name="requestInfo" value="Request Url: http://localhost:8080/api/question/fetch&#13;&#10;Request Headers: &#13;&#10;    Authorization: Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJuYW1lIjoic2FwaWVjZSIsImlkIjoxLCJleHAiOjE3MDExNjI3NzgsImlhdCI6MTcwMDczMDc3OCwianRpIjoiZWViOGEzN2UtMzA4Yi00YjUyLWE2ZjktOWNiMjAxNjNiNmU0IiwiYXV0aG9yaXRpZXMiOlsiUk9MRV9hZG1pbiJdfQ.JveaPa3_bKDrcsJtJX3sWxMrLovbPQIdUXn1GJVsSs8&#13;&#10;    Accept: application/json,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8&#13;&#10;    User-Agent: Restful Fast Request/2023.2.1.3&#13;&#10;    Accept-Encoding: gzip, deflate&#13;&#10;Request Body: &#13;&#10;    null&#13;&#10;" />
+          <option name="response" value="[{&quot;questionId&quot;:55,&quot;type&quot;:&quot;single_choice&quot;,&quot;content&quot;:&quot;里奥哈葡萄酒主要以哪种葡萄品种酿造？&quot;,&quot;options&quot;:&quot;A.霞多丽,B.佳美,C.丹魄,D.桑娇维塞&quot;,&quot;answer&quot;:&quot;C&quot;,&quot;isSelected&quot;:false},{&quot;questionId&quot;:88,&quot;type&quot;:&quot;single_choice&quot;,&quot;content&quot;:&quot;白兰地是通过蒸馏哪种饮料制成的？&quot;,&quot;options&quot;:&quot;A.葡萄酒,B.啤酒,C.苹果汁,D.米酒&quot;,&quot;answer&quot;:&quot;A&quot;,&quot;isSelected&quot;:false},{&quot;questionId&quot;:21,&quot;type&quot;:&quot;single_choice&quot;,&quot;content&quot;:&quot;夏布利产区以生产哪种类型的葡萄酒而闻名？&quot;,&quot;options&quot;:&quot;A.丽贝拉,B.默洛,C.赤霞珠,D.霞多丽&quot;,&quot;answer&quot;:&quot;D&quot;,&quot;isSelected&quot;:false},{&quot;questionId&quot;:63,&quot;type&quot;:&quot;single_choice&quot;,&quot;content&quot;:&quot;下列哪种葡萄酒被称为'夜之女王'，是德国著名的甜白葡萄酒？&quot;,&quot;options&quot;:&quot;A.雷司令,B.霞多丽,C.格瓦茨特拉明,D.冰酒&quot;,&quot;answer&quot;:&quot;A&quot;,&quot;isSelected&quot;:false},{&quot;questionId&quot;:47,&quot;type&quot;:&quot;single_choice&quot;,&quot;content&quot;:&quot;通常情况下，下列哪种葡萄酒是在橡木桶中陈年？&quot;,&quot;options&quot;:&quot;A.霞多丽,B.波尔多,C.皮诺·诺瓦尔,D.普罗塞克&quot;,&quot;answer&quot;:&quot;A&quot;,&quot;isSelected&quot;:false},{&quot;questionId&quot;:56,&quot;type&quot;:&quot;single_choice&quot;,&quot;content&quot;:&quot;通常情况下，葡萄酒中的酸度是由哪种物质主导的？&quot;,&quot;options&quot;:&quot;A.酒精,B.单宁,C.糖分,D.酒石酸&quot;,&quot;answer&quot;:&quot;D&quot;,&quot;isSelected&quot;:false},{&quot;questionId&quot;:80,&quot;type&quot;:&quot;single_choice&quot;,&quot;content&quot;:&quot;白兰地是通过蒸馏哪种饮料制成的？&quot;,&quot;options&quot;:&quot;A.苹果汁,B.葡萄酒,C.米酒,D.啤酒&quot;,&quot;answer&quot;:&quot;B&quot;,&quot;isSelected&quot;:false},{&quot;questionId&quot;:71,&quot;type&quot;:&quot;single_choice&quot;,&quot;content&quot;:&quot;在葡萄酒品鉴中，用于描述葡萄酒酸度和果味之间平衡的术语是什么？&quot;,&quot;options&quot;:&quot;A.结构,B.平衡,C.酒体,D.芳香&quot;,&quot;answer&quot;:&quot;B&quot;,&quot;isSelected&quot;:false},{&quot;questionId&quot;:14,&quot;type&quot;:&quot;multiple_choice&quot;,&quot;content&quot;:&quot;下列哪些因素对葡萄酒的品质有显著影响？&quot;,&quot;options&quot;:&quot;A.阳光照射,B.酒标设计,C.发酵容器,D.葡萄的成熟度&quot;,&quot;answer&quot;:&quot;A.C.D&quot;,&quot;isSelected&quot;:false},{&quot;questionId&quot;:82,&quot;type&quot;:&quot;multiple_choice&quot;,&quot;content&quot;:&quot;葡萄酒中哪些因素可以决定其甜度？&quot;,&quot;options&quot;:&quot;A.酸度,B.发酵时间,C.葡萄的成熟度,D.添加的糖分&quot;,&quot;answer&quot;:&quot;C.B.D&quot;,&quot;isSelected&quot;:false},{&quot;questionId&quot;:42,&quot;type&quot;:&quot;multiple_choice&quot;,&quot;content&quot;:&quot;葡萄酒的口感可以被哪些因素影响？&quot;,&quot;options&quot;:&quot;A.酒体,B.酸度,C.单宁,D.甜度&quot;,&quot;answer&quot;:&quot;B.C.D.A&quot;,&quot;isSelected&quot;:false},{&quot;questionId&quot;:74,&quot;type&quot;:&quot;multiple_choice&quot;,&quot;content&quot;:&quot;以下哪些方法被用于增加葡萄酒的复杂性和口感深度？&quot;,&quot;options&quot;:&quot;A.橡木桶陈年,B.酵母接触,C.冷温发酵,D.瓶内陈年&quot;,&quot;answer&quot;:&quot;A.D.B&quot;,&quot;isSelected&quot;:false},{&quot;questionId&quot;:6,&quot;type&quot;:&quot;fill_in_the_blank&quot;,&quot;content&quot;:&quot;葡萄酒中的_________ 是由于酵母将葡萄汁中的糖分转化为酒精和二氧化碳而产生的。&quot;,&quot;options&quot;:null,&quot;answer&quot;:&quot;酒精&quot;,&quot;isSelected&quot;:false},{&quot;questionId&quot;:52,&quot;type&quot;:&quot;fill_in_the_blank&quot;,&quot;content&quot;:&quot;_________ 是一种葡萄酒术语，用来描述葡萄酒中的果味和花香等风味特征。&quot;,&quot;options&quot;:null,&quot;answer&quot;:&quot;芳香复杂性&quot;,&quot;isSelected&quot;:false},{&quot;questionId&quot;:91,&quot;type&quot;:&quot;fill_in_the_blank&quot;,&quot;content&quot;:&quot;_________ 是指葡萄酒中的单宁和其他化合物随时间的演变而逐渐融合的过程。&quot;,&quot;options&quot;:null,&quot;answer&quot;:&quot;软化&quot;,&quot;isSelected&quot;:false},{&quot;questionId&quot;:5,&quot;type&quot;:&quot;fill_in_the_blank&quot;,&quot;content&quot;:&quot;_________ 是用来描述一种葡萄酒的香气和口感，通常指含有石灰岩或矿物质味道的白葡萄酒。&quot;,&quot;options&quot;:null,&quot;answer&quot;:&quot;矿物感&quot;,&quot;isSelected&quot;:false},{&quot;questionId&quot;:59,&quot;type&quot;:&quot;fill_in_the_blank&quot;,&quot;content&quot;:&quot;_________ 是一种流行的葡萄酒评分系统，由葡萄酒评论家罗伯特·帕克创立。&quot;,&quot;options&quot;:null,&quot;answer&quot;:&quot;帕克分&quot;,&quot;isSelected&quot;:false},{&quot;questionId&quot;:69,&quot;type&quot;:&quot;essay&quot;,&quot;content&quot;:&quot;解释为什么葡萄酒的储存温度很重要，以及理想的储存温度范围是多少。&quot;,&quot;options&quot;:null,&quot;answer&quot;:&quot;葡萄酒的储存温度对其品质保持非常重要，因为温度变化会影响葡萄酒的成熟速度和风味。理想的储存温度一般在12-14°C，可以保持葡萄酒的稳定性和慢慢成熟。&quot;,&quot;isSelected&quot;:false},{&quot;questionId&quot;:18,&quot;type&quot;:&quot;essay&quot;,&quot;content&quot;:&quot;解释‘葡萄酒单宁’的来源和作用。&quot;,&quot;options&quot;:null,&quot;answer&quot;:&quot;葡萄酒中的单宁主要来源于葡萄皮、籽和橡木桶。它为葡萄酒提供结构，赋予苦涩感，有助于葡萄酒的陈年潜力。&quot;,&quot;isSelected&quot;:false},{&quot;questionId&quot;:27,&quot;type&quot;:&quot;essay&quot;,&quot;content&quot;:&quot;解释什么是'陈年潜力'，以及为何某些葡萄酒比其他的更适合陈年。&quot;,&quot;options&quot;:null,&quot;answer&quot;:&quot;陈年潜力是指葡萄酒随时间发展而改善其风味和复杂度的能力。高单宁含量、酸度和糖分的葡萄酒通常具有更好的陈年潜力，因为这些成分随时间的演变有助于葡萄酒的风味成熟。&quot;,&quot;isSelected&quot;:false},{&quot;questionId&quot;:61,&quot;type&quot;:&quot;essay&quot;,&quot;content&quot;:&quot;简述干邑（Cognac）和白兰地（Brandy）之间的主要区别。&quot;,&quot;options&quot;:null,&quot;answer&quot;:&quot;干邑是一种特定地区生产的白兰地，必须在法国干邑地区按照严格的规定生产。而白兰地则是一个更广泛的术语，指的是通过葡萄酒蒸馏而成的酒精饮料，可以在世界各地生产。&quot;,&quot;isSelected&quot;:false},{&quot;questionId&quot;:38,&quot;type&quot;:&quot;essay&quot;,&quot;content&quot;:&quot;简述葡萄酒酿造中酒精发酵的基本原理。&quot;,&quot;options&quot;:null,&quot;answer&quot;:&quot;酒精发酵是指酵母将葡萄汁中的糖分转化为酒精和二氧化碳的过程。这个过程产生了葡萄酒的酒精含量，并且会影响其风味和口感。&quot;,&quot;isSelected&quot;:false},{&quot;questionId&quot;:7,&quot;type&quot;:&quot;essay&quot;,&quot;content&quot;:&quot;简述桶陈对葡萄酒口感的影响。&quot;,&quot;options&quot;:null,&quot;answer&quot;:&quot;桶陈可以增加葡萄酒的复杂性和深度，赋予其木质香、香草味或烤面包味。它还有助于软化葡萄酒中的单宁，使酒体更加圆润。&quot;,&quot;isSelected&quot;:false}]" />
+          <option name="url" value="/api/question/fetch" />
+        </ResponseHistory>
+        <ResponseHistory>
+          <option name="className" value="com.sapiece.question.controller.QuestionController" />
+          <option name="code" value="200" />
+          <option name="enableEnv" value="local" />
+          <option name="enableProject" value="project-backend" />
+          <option name="method" value="fetchQuestions" />
+          <option name="methodType" value="GET" />
+          <option name="paramGroup">
+            <ParamGroupCollection>
+              <option name="className" value="com.sapiece.question.controller.QuestionController" />
+              <option name="method" value="fetchQuestions" />
+              <option name="methodDescription" value="fetchQuestions" />
+              <option name="multipartKeyValueListJson" value="[]" />
+              <option name="originUrl" value="/api/question/fetch" />
+              <option name="pathParamsKeyValueListJson" value="[]" />
+              <option name="returnDocument" value="{&quot;status&quot;:{},&quot;headers&quot;:{},&quot;body&quot;:{}}" />
+              <option name="url" value="/api/question/fetch" />
+              <option name="urlEncodedKeyValueListJson" value="[]" />
+              <option name="urlParamsKeyValueListJson" value="[]" />
+            </ParamGroupCollection>
+          </option>
+          <option name="requestInfo" value="Request Url: http://localhost:8080/api/question/fetch&#13;&#10;Request Headers: &#13;&#10;    Authorization: Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJuYW1lIjoic2FwaWVjZSIsImlkIjoxLCJleHAiOjE3MDExNjI3NzgsImlhdCI6MTcwMDczMDc3OCwianRpIjoiZWViOGEzN2UtMzA4Yi00YjUyLWE2ZjktOWNiMjAxNjNiNmU0IiwiYXV0aG9yaXRpZXMiOlsiUk9MRV9hZG1pbiJdfQ.JveaPa3_bKDrcsJtJX3sWxMrLovbPQIdUXn1GJVsSs8&#13;&#10;    Accept: application/json,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8&#13;&#10;    User-Agent: Restful Fast Request/2023.2.1.3&#13;&#10;    Accept-Encoding: gzip, deflate&#13;&#10;Request Body: &#13;&#10;    null&#13;&#10;" />
+          <option name="response" value="[{&quot;questionId&quot;:1,&quot;type&quot;:&quot;single_choice&quot;,&quot;content&quot;:&quot;波特酒主要生产于哪个国家？&quot;,&quot;options&quot;:&quot;A. 法国,C. 西班牙,D. 葡萄牙,B. 意大利&quot;,&quot;answer&quot;:&quot;D&quot;,&quot;isSelected&quot;:false},{&quot;questionId&quot;:12,&quot;type&quot;:&quot;single_choice&quot;,&quot;content&quot;:&quot;下列哪种酒是由稻米酿造的？&quot;,&quot;options&quot;:&quot;A. 白兰地,B. 清酒,D. 伏特加,C. 朗姆酒&quot;,&quot;answer&quot;:&quot;B&quot;,&quot;isSelected&quot;:false},{&quot;questionId&quot;:55,&quot;type&quot;:&quot;single_choice&quot;,&quot;content&quot;:&quot;里奥哈葡萄酒主要以哪种葡萄品种酿造？&quot;,&quot;options&quot;:&quot;D. 佳美,C. 桑娇维塞,B. 丹魄,A. 霞多丽&quot;,&quot;answer&quot;:&quot;B&quot;,&quot;isSelected&quot;:false},{&quot;questionId&quot;:40,&quot;type&quot;:&quot;single_choice&quot;,&quot;content&quot;:&quot;通常情况下，香槟酒是由哪些葡萄品种混合酿造的？&quot;,&quot;options&quot;:&quot;C. 黑皮诺、霞多丽和梅尼埃,D. 赤霞珠和桑娇维塞,B. 黑皮诺和佳美,A. 皮诺·格里吉奥和霞多丽&quot;,&quot;answer&quot;:&quot;C&quot;,&quot;isSelected&quot;:false},{&quot;questionId&quot;:11,&quot;type&quot;:&quot;single_choice&quot;,&quot;content&quot;:&quot;下列哪种酒通常用于烹饪？&quot;,&quot;options&quot;:&quot;D. 冰酒,C. 马赛拉酒,B. 香槟,A. 波特酒&quot;,&quot;answer&quot;:&quot;C&quot;,&quot;isSelected&quot;:false},{&quot;questionId&quot;:63,&quot;type&quot;:&quot;single_choice&quot;,&quot;content&quot;:&quot;下列哪种葡萄酒被称为'夜之女王'，是德国著名的甜白葡萄酒？&quot;,&quot;options&quot;:&quot;B. 雷司令,D. 霞多丽,C. 格瓦茨特拉明,A. 冰酒&quot;,&quot;answer&quot;:&quot;B&quot;,&quot;isSelected&quot;:false},{&quot;questionId&quot;:87,&quot;type&quot;:&quot;single_choice&quot;,&quot;content&quot;:&quot;下列哪种葡萄酒通常以干型和半干型最为著名？&quot;,&quot;options&quot;:&quot;B. 霞多丽,D. 佳美,C. 赤霞珠,A. 雷司令&quot;,&quot;answer&quot;:&quot;A&quot;,&quot;isSelected&quot;:false},{&quot;questionId&quot;:32,&quot;type&quot;:&quot;single_choice&quot;,&quot;content&quot;:&quot;下列哪种葡萄酒通常是用黑皮诺（Pinot Noir）葡萄酿造的？&quot;,&quot;options&quot;:&quot;A. 红葡萄酒,C. 玫瑰葡萄酒,D. 香槟,B. 白葡萄酒&quot;,&quot;answer&quot;:&quot;D&quot;,&quot;isSelected&quot;:false},{&quot;questionId&quot;:3,&quot;type&quot;:&quot;multiple_choice&quot;,&quot;content&quot;:&quot;在品酒过程中，通常会评估哪些方面？&quot;,&quot;options&quot;:&quot;B. 香气,C. 口感,D. 声音,A. 色泽&quot;,&quot;answer&quot;:&quot;A.B.C&quot;,&quot;isSelected&quot;:false},{&quot;questionId&quot;:74,&quot;type&quot;:&quot;multiple_choice&quot;,&quot;content&quot;:&quot;以下哪些方法被用于增加葡萄酒的复杂性和口感深度？&quot;,&quot;options&quot;:&quot;C. 瓶内陈年,A. 橡木桶陈年,D. 酵母接触,B. 冷温发酵&quot;,&quot;answer&quot;:&quot;A.C.D&quot;,&quot;isSelected&quot;:false},{&quot;questionId&quot;:58,&quot;type&quot;:&quot;multiple_choice&quot;,&quot;content&quot;:&quot;在品酒过程中，哪些方面被认为是评估葡萄酒的关键指标？&quot;,&quot;options&quot;:&quot;A. 色泽,B. 香气,C. 口感,D. 瓶装设计&quot;,&quot;answer&quot;:&quot;A.B.C&quot;,&quot;isSelected&quot;:false},{&quot;questionId&quot;:42,&quot;type&quot;:&quot;multiple_choice&quot;,&quot;content&quot;:&quot;葡萄酒的口感可以被哪些因素影响？&quot;,&quot;options&quot;:&quot;C. 甜度,D. 酒体,A. 酸度,B. 单宁&quot;,&quot;answer&quot;:&quot;A.B.C.D&quot;,&quot;isSelected&quot;:false},{&quot;questionId&quot;:59,&quot;type&quot;:&quot;fill_in_the_blank&quot;,&quot;content&quot;:&quot;_________ 是一种流行的葡萄酒评分系统，由葡萄酒评论家罗伯特·帕克创立。&quot;,&quot;options&quot;:null,&quot;answer&quot;:&quot;帕克分&quot;,&quot;isSelected&quot;:false},{&quot;questionId&quot;:25,&quot;type&quot;:&quot;fill_in_the_blank&quot;,&quot;content&quot;:&quot;_________ 是一种在酒瓶中进行二次发酵的过程，通常用于生产某些类型的起泡酒。&quot;,&quot;options&quot;:null,&quot;answer&quot;:&quot;瓶内二次发酵&quot;,&quot;isSelected&quot;:false},{&quot;questionId&quot;:26,&quot;type&quot;:&quot;fill_in_the_blank&quot;,&quot;content&quot;:&quot;_________ 是评价葡萄酒的三个基本标准之一，指的是葡萄酒在口中留存的时间长度。&quot;,&quot;options&quot;:null,&quot;answer&quot;:&quot;余味&quot;,&quot;isSelected&quot;:false},{&quot;questionId&quot;:84,&quot;type&quot;:&quot;fill_in_the_blank&quot;,&quot;content&quot;:&quot;在葡萄酒的世界里，_________ 通常用来描述那些具有鲜明、浓烈果香的葡萄酒。&quot;,&quot;options&quot;:null,&quot;answer&quot;:&quot;果味浓郁&quot;,&quot;isSelected&quot;:false},{&quot;questionId&quot;:43,&quot;type&quot;:&quot;fill_in_the_blank&quot;,&quot;content&quot;:&quot;在葡萄酒制作过程中，_________ 是指将葡萄酒从一个容器转移到另一个容器，以分离沉淀物。&quot;,&quot;options&quot;:null,&quot;answer&quot;:&quot;渗流&quot;,&quot;isSelected&quot;:false},{&quot;questionId&quot;:93,&quot;type&quot;:&quot;essay&quot;,&quot;content&quot;:&quot;描述如何通过色泽来判断葡萄酒的年龄和类型。&quot;,&quot;options&quot;:null,&quot;answer&quot;:&quot;葡萄酒的色泽可以揭示其年龄和类型。年轻的红葡萄酒通常呈鲜艳的红色或紫色，而随着年龄增长，颜色转为砖红或棕色。年轻的白葡萄酒颜色较浅，而老白酒则变为深黄或琥珀色。&quot;,&quot;isSelected&quot;:false},{&quot;questionId&quot;:27,&quot;type&quot;:&quot;essay&quot;,&quot;content&quot;:&quot;解释什么是'陈年潜力'，以及为何某些葡萄酒比其他的更适合陈年。&quot;,&quot;options&quot;:null,&quot;answer&quot;:&quot;陈年潜力是指葡萄酒随时间发展而改善其风味和复杂度的能力。高单宁含量、酸度和糖分的葡萄酒通常具有更好的陈年潜力，因为这些成分随时间的演变有助于葡萄酒的风味成熟。&quot;,&quot;isSelected&quot;:false},{&quot;questionId&quot;:17,&quot;type&quot;:&quot;essay&quot;,&quot;content&quot;:&quot;描述香槟的基本制作过程。&quot;,&quot;options&quot;:null,&quot;answer&quot;:&quot;香槟的制作过程包括初次发酵、混合、瓶内二次发酵、陈年、冷冻与除渣、加入剂量酒，最后密封瓶塞。&quot;,&quot;isSelected&quot;:false},{&quot;questionId&quot;:77,&quot;type&quot;:&quot;essay&quot;,&quot;content&quot;:&quot;描述在葡萄酒品鉴中，'口感'这一术语包含哪些方面。&quot;,&quot;options&quot;:null,&quot;answer&quot;:&quot;口感涵盖葡萄酒的多个方面，包括酸度、甜度、单宁、酒体和余味。它描述了葡萄酒在口中的整体感觉，包括质地、重量和平衡。&quot;,&quot;isSelected&quot;:false},{&quot;questionId&quot;:69,&quot;type&quot;:&quot;essay&quot;,&quot;content&quot;:&quot;解释为什么葡萄酒的储存温度很重要，以及理想的储存温度范围是多少。&quot;,&quot;options&quot;:null,&quot;answer&quot;:&quot;葡萄酒的储存温度对其品质保持非常重要，因为温度变化会影响葡萄酒的成熟速度和风味。理想的储存温度一般在12-14°C，可以保持葡萄酒的稳定性和慢慢成熟。&quot;,&quot;isSelected&quot;:false},{&quot;questionId&quot;:38,&quot;type&quot;:&quot;essay&quot;,&quot;content&quot;:&quot;简述葡萄酒酿造中酒精发酵的基本原理。&quot;,&quot;options&quot;:null,&quot;answer&quot;:&quot;酒精发酵是指酵母将葡萄汁中的糖分转化为酒精和二氧化碳的过程。这个过程产生了葡萄酒的酒精含量，并且会影响其风味和口感。&quot;,&quot;isSelected&quot;:false}]" />
+          <option name="url" value="/api/question/fetch" />
+        </ResponseHistory>
+        <ResponseHistory>
+          <option name="className" value="com.sapiece.question.controller.QuestionController" />
+          <option name="code" value="200" />
+          <option name="enableEnv" value="local" />
+          <option name="enableProject" value="project-backend" />
+          <option name="method" value="fetchQuestions" />
+          <option name="methodType" value="GET" />
+          <option name="paramGroup">
+            <ParamGroupCollection>
+              <option name="className" value="com.sapiece.question.controller.QuestionController" />
+              <option name="method" value="fetchQuestions" />
+              <option name="methodDescription" value="fetchQuestions" />
+              <option name="multipartKeyValueListJson" value="[]" />
+              <option name="originUrl" value="/api/question/fetch" />
+              <option name="pathParamsKeyValueListJson" value="[]" />
+              <option name="returnDocument" value="{&quot;status&quot;:{},&quot;headers&quot;:{},&quot;body&quot;:{}}" />
+              <option name="url" value="/api/question/fetch" />
+              <option name="urlEncodedKeyValueListJson" value="[]" />
+              <option name="urlParamsKeyValueListJson" value="[]" />
+            </ParamGroupCollection>
+          </option>
+          <option name="requestInfo" value="Request Url: http://localhost:8080/api/question/fetch&#13;&#10;Request Headers: &#13;&#10;    Authorization: Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJuYW1lIjoic2FwaWVjZSIsImlkIjoxLCJleHAiOjE3MDExNjI3NzgsImlhdCI6MTcwMDczMDc3OCwianRpIjoiZWViOGEzN2UtMzA4Yi00YjUyLWE2ZjktOWNiMjAxNjNiNmU0IiwiYXV0aG9yaXRpZXMiOlsiUk9MRV9hZG1pbiJdfQ.JveaPa3_bKDrcsJtJX3sWxMrLovbPQIdUXn1GJVsSs8&#13;&#10;    Accept: application/json,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8&#13;&#10;    User-Agent: Restful Fast Request/2023.2.1.3&#13;&#10;    Accept-Encoding: gzip, deflate&#13;&#10;Request Body: &#13;&#10;    null&#13;&#10;" />
+          <option name="response" value="[]" />
+          <option name="url" value="/api/question/fetch" />
+        </ResponseHistory>
+        <ResponseHistory>
           <option name="className" value="com.sapiece.util.JwtUtils" />
           <option name="code" value="500" />
           <option name="enableEnv" value="local" />
@@ -399,141 +524,6 @@
           </option>
           <option name="requestInfo" value="Request Url: http://localhost:8080/api/auth/login&#13;&#10;Request Headers: &#13;&#10;    Authorization: Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJuYW1lIjoi5bCP57GzIiwiaWQiOjEsImV4cCI6MTcwMDA0MDM2OSwiaWF0IjoxNjk5NjA4MzY5LCJhdXRob3JpdGllcyI6W119.V9oAPkynQADSysQNcZTwL4tmqI9bcjoVU5H0o6r7LLs&#13;&#10;    Accept: application/json,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8&#13;&#10;    User-Agent: Restful Fast Request/2023.2.1.3&#13;&#10;    Accept-Encoding: gzip, deflate&#13;&#10;    Content-Length: 78&#13;&#10;    Content-Type: application/json;charset=UTF-8&#13;&#10;Request Body: &#13;&#10;    {&#10;  &quot;username&quot;: &quot;user&quot;,&#10;  &quot;password&quot;: &quot;a7fff1a4-e5bf-4473-a556-52d74c665c3c&quot;&#10;}&#13;&#10;" />
           <option name="response" value="{&quot;code&quot;:401,&quot;data&quot;:null,&quot;message&quot;:&quot;Full authentication is required to access this resource&quot;}" />
-          <option name="url" value="/api/auth/login" />
-        </ResponseHistory>
-        <ResponseHistory>
-          <option name="className" value="com.sapiece.util.JwtUtils" />
-          <option name="code" value="200" />
-          <option name="enableEnv" value="local" />
-          <option name="enableProject" value="project-backend" />
-          <option name="method" value="expireTime" />
-          <option name="methodType" value="GET" />
-          <option name="paramGroup">
-            <ParamGroupCollection>
-              <option name="bodyKeyValueListJson" value="{&#10;  &quot;username&quot;: &quot;user&quot;,&#10;  &quot;password&quot;: &quot;a7fff1a4-e5bf-4473-a556-52d74c665c3c&quot;&#10;}" />
-              <option name="className" value="com.sapiece.util.JwtUtils" />
-              <option name="method" value="expireTime" />
-              <option name="methodDescription" value="expireTime" />
-              <option name="methodType" value="POST" />
-              <option name="multipartKeyValueListJson" value="[]" />
-              <option name="originUrl" value="/" />
-              <option name="pathParamsKeyValueListJson" value="[]" />
-              <option name="returnDocument" value="&quot;No comment,Type =String&quot;" />
-              <option name="url" value="/api/auth/login" />
-              <option name="urlEncodedKeyValueListJson" value="[]" />
-              <option name="urlParamsKeyValueListJson" value="[]" />
-            </ParamGroupCollection>
-          </option>
-          <option name="requestInfo" value="Request Url: http://localhost:8080/api/auth/login&#13;&#10;Request Headers: &#13;&#10;    Accept: application/json,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8&#13;&#10;    User-Agent: Restful Fast Request/2023.2.1.3&#13;&#10;    Accept-Encoding: gzip, deflate&#13;&#10;    Content-Length: 78&#13;&#10;    Content-Type: application/json;charset=UTF-8&#13;&#10;Request Body: &#13;&#10;    {&#10;  &quot;username&quot;: &quot;user&quot;,&#10;  &quot;password&quot;: &quot;a7fff1a4-e5bf-4473-a556-52d74c665c3c&quot;&#10;}&#13;&#10;" />
-          <option name="response" value="{&quot;code&quot;:401,&quot;data&quot;:null,&quot;message&quot;:&quot;用户名或密码错误&quot;}" />
-          <option name="url" value="/api/auth/login" />
-        </ResponseHistory>
-        <ResponseHistory>
-          <option name="className" value="com.sapiece.util.JwtUtils" />
-          <option name="code" value="200" />
-          <option name="enableEnv" value="local" />
-          <option name="enableProject" value="project-backend" />
-          <option name="method" value="expireTime" />
-          <option name="methodType" value="GET" />
-          <option name="paramGroup">
-            <ParamGroupCollection>
-              <option name="bodyKeyValueListJson" value=" &quot;username&quot;: &quot;user&quot;,&#10;  &quot;password&quot;: &quot;e264c62f-b2c1-4959-8c45-66734f44c8ed&quot;&#10;" />
-              <option name="className" value="com.sapiece.util.JwtUtils" />
-              <option name="method" value="expireTime" />
-              <option name="methodDescription" value="expireTime" />
-              <option name="methodType" value="POST" />
-              <option name="multipartKeyValueListJson" value="[]" />
-              <option name="originUrl" value="/" />
-              <option name="pathParamsKeyValueListJson" value="[]" />
-              <option name="returnDocument" value="&quot;No comment,Type =String&quot;" />
-              <option name="url" value="/api/auth/login" />
-              <option name="urlEncodedKeyValueListJson" value="[]" />
-              <option name="urlParamsKeyValueListJson" value="[]" />
-            </ParamGroupCollection>
-          </option>
-          <option name="requestInfo" value="Request Url: http://localhost:8080/api/auth/login&#13;&#10;Request Headers: &#13;&#10;    Accept: application/json,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8&#13;&#10;    User-Agent: Restful Fast Request/2023.2.1.3&#13;&#10;    Accept-Encoding: gzip, deflate&#13;&#10;Request Body: &#13;&#10;     &quot;username&quot;: &quot;user&quot;,&#10;  &quot;password&quot;: &quot;e264c62f-b2c1-4959-8c45-66734f44c8ed&quot;&#10;&#13;&#10;" />
-          <option name="response" value="{&quot;code&quot;:401,&quot;data&quot;:null,&quot;message&quot;:&quot;用户名或密码错误&quot;}" />
-          <option name="url" value="/api/auth/login" />
-        </ResponseHistory>
-        <ResponseHistory>
-          <option name="className" value="com.sapiece.util.JwtUtils" />
-          <option name="code" value="200" />
-          <option name="enableEnv" value="local" />
-          <option name="enableProject" value="project-backend" />
-          <option name="method" value="expireTime" />
-          <option name="methodType" value="GET" />
-          <option name="paramGroup">
-            <ParamGroupCollection>
-              <option name="bodyKeyValueListJson" value="{&#10;  &quot;username&quot;: &quot;user&quot;,&#10;  &quot;password&quot;: &quot;e264c62f-b2c1-4959-8c45-66734f44c8ed&quot;&#10;}" />
-              <option name="className" value="com.sapiece.util.JwtUtils" />
-              <option name="method" value="expireTime" />
-              <option name="methodDescription" value="expireTime" />
-              <option name="methodType" value="POST" />
-              <option name="multipartKeyValueListJson" value="[]" />
-              <option name="originUrl" value="/" />
-              <option name="pathParamsKeyValueListJson" value="[]" />
-              <option name="returnDocument" value="&quot;No comment,Type =String&quot;" />
-              <option name="url" value="/api/auth/login" />
-              <option name="urlEncodedKeyValueListJson" value="[]" />
-              <option name="urlParamsKeyValueListJson" value="[]" />
-            </ParamGroupCollection>
-          </option>
-          <option name="requestInfo" value="Request Url: http://localhost:8080/api/auth/login&#13;&#10;Request Headers: &#13;&#10;    Accept: application/json,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8&#13;&#10;    User-Agent: Restful Fast Request/2023.2.1.3&#13;&#10;    Accept-Encoding: gzip, deflate&#13;&#10;    Content-Length: 78&#13;&#10;    Content-Type: application/json;charset=UTF-8&#13;&#10;Request Body: &#13;&#10;    {&#10;  &quot;username&quot;: &quot;user&quot;,&#10;  &quot;password&quot;: &quot;e264c62f-b2c1-4959-8c45-66734f44c8ed&quot;&#10;}&#13;&#10;" />
-          <option name="response" value="{&quot;code&quot;:401,&quot;data&quot;:null,&quot;message&quot;:&quot;用户名或密码错误&quot;}" />
-          <option name="url" value="/api/auth/login" />
-        </ResponseHistory>
-        <ResponseHistory>
-          <option name="className" value="com.sapiece.util.JwtUtils" />
-          <option name="code" value="200" />
-          <option name="enableEnv" value="local" />
-          <option name="enableProject" value="project-backend" />
-          <option name="method" value="expireTime" />
-          <option name="methodType" value="GET" />
-          <option name="paramGroup">
-            <ParamGroupCollection>
-              <option name="bodyKeyValueListJson" value="{&#10;  &quot;username&quot;: &quot;user&quot;,&#10;  &quot;password&quot;: &quot;a2975015-2ed3-4135-956b-77265ac31e61&quot;,&#10;}" />
-              <option name="className" value="com.sapiece.util.JwtUtils" />
-              <option name="method" value="expireTime" />
-              <option name="methodDescription" value="expireTime" />
-              <option name="methodType" value="POST" />
-              <option name="multipartKeyValueListJson" value="[]" />
-              <option name="originUrl" value="/" />
-              <option name="pathParamsKeyValueListJson" value="[]" />
-              <option name="returnDocument" value="&quot;No comment,Type =String&quot;" />
-              <option name="url" value="/api/auth/login" />
-              <option name="urlEncodedKeyValueListJson" value="[]" />
-              <option name="urlParamsKeyValueListJson" value="[]" />
-            </ParamGroupCollection>
-          </option>
-          <option name="requestInfo" value="Request Url: http://localhost:8080/api/auth/login&#13;&#10;Request Headers: &#13;&#10;    Accept: application/json,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8&#13;&#10;    User-Agent: Restful Fast Request/2023.2.1.3&#13;&#10;    Accept-Encoding: gzip, deflate&#13;&#10;    Content-Length: 79&#13;&#10;    Content-Type: application/json;charset=UTF-8&#13;&#10;Request Body: &#13;&#10;    {&#10;  &quot;username&quot;: &quot;user&quot;,&#10;  &quot;password&quot;: &quot;a2975015-2ed3-4135-956b-77265ac31e61&quot;,&#10;}&#13;&#10;" />
-          <option name="response" value="{&quot;code&quot;:401,&quot;data&quot;:null,&quot;message&quot;:&quot;用户名或密码错误&quot;}" />
-          <option name="url" value="/api/auth/login" />
-        </ResponseHistory>
-        <ResponseHistory>
-          <option name="className" value="com.sapiece.util.JwtUtils" />
-          <option name="code" value="200" />
-          <option name="enableEnv" value="local" />
-          <option name="enableProject" value="project-backend" />
-          <option name="method" value="expireTime" />
-          <option name="methodType" value="GET" />
-          <option name="paramGroup">
-            <ParamGroupCollection>
-              <option name="bodyKeyValueListJson" value="{&#10;  &quot;username&quot;: &quot;user&quot;,&#10;  &quot;password&quot;: &quot;a2975015-2ed3-4135-956b-77265ac31e61&quot;,&#10;}" />
-              <option name="className" value="com.sapiece.util.JwtUtils" />
-              <option name="method" value="expireTime" />
-              <option name="methodDescription" value="expireTime" />
-              <option name="methodType" value="POST" />
-              <option name="multipartKeyValueListJson" value="[]" />
-              <option name="originUrl" value="/" />
-              <option name="pathParamsKeyValueListJson" value="[]" />
-              <option name="returnDocument" value="&quot;No comment,Type =String&quot;" />
-              <option name="url" value="/api/auth/login" />
-              <option name="urlEncodedKeyValueListJson" value="[]" />
-              <option name="urlParamsKeyValueListJson" value="[]" />
-            </ParamGroupCollection>
-          </option>
-          <option name="requestInfo" value="Request Url: http://localhost:8080/api/auth/login&#13;&#10;Request Headers: &#13;&#10;    Accept: application/json,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8&#13;&#10;    User-Agent: Restful Fast Request/2023.2.1.3&#13;&#10;    Accept-Encoding: gzip, deflate&#13;&#10;    Content-Length: 79&#13;&#10;    Content-Type: application/json;charset=UTF-8&#13;&#10;Request Body: &#13;&#10;    {&#10;  &quot;username&quot;: &quot;user&quot;,&#10;  &quot;password&quot;: &quot;a2975015-2ed3-4135-956b-77265ac31e61&quot;,&#10;}&#13;&#10;" />
-          <option name="response" value="{&quot;code&quot;:401,&quot;data&quot;:null,&quot;message&quot;:&quot;用户名或密码错误&quot;}" />
           <option name="url" value="/api/auth/login" />
         </ResponseHistory>
       </list>
