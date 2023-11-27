@@ -54,7 +54,7 @@ public class QuestionServiceImpl extends ServiceImpl<QuestionMapper, Question> i
         if ("single_choice".equals(type) || "multiple_choice".equals(type)) {
             randomizeOptionsAndAnswers(questions, "multiple_choice".equals(type));
         }
-        markQuestionsAsSelected(questions);
+       // markQuestionsAsSelected(questions);增进功能到时候可以让所有人的题目不一样
         return questions;
     }
 
@@ -80,9 +80,9 @@ public class QuestionServiceImpl extends ServiceImpl<QuestionMapper, Question> i
      */
     public void markQuestionsAsSelected(List<Question> questions) {
         List<Integer> questionIds = questions.stream().map(Question::getQuestionId).collect(Collectors.toList());
-        if (!questionIds.isEmpty()) {
-            questionMapper.batchUpdateIsSelected(questionIds,false);
-        }
+//        if (!questionIds.isEmpty()) {
+//            questionMapper.batchUpdateIsSelected(questionIds,false);
+//        }
     }
 
     /**

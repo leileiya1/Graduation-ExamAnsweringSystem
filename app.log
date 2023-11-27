@@ -1,0 +1,48 @@
+2023-11-27 11:22:22 [main] INFO  c.sapiece.ProjectBackendApplication - Starting ProjectBackendApplication using Java 21.0.1 with PID 10200 (D:\idea\GraduationDesign\project-backend\target\classes started by 周磊磊 in D:\idea\GraduationDesign)
+2023-11-27 11:22:22 [main] DEBUG c.sapiece.ProjectBackendApplication - Running with Spring Boot v3.1.5, Spring v6.0.13
+2023-11-27 11:22:22 [main] INFO  c.sapiece.ProjectBackendApplication - No active profile set, falling back to 1 default profile: "default"
+2023-11-27 11:22:24 [main] ERROR o.a.c.core.AprLifecycleListener - An incompatible version [1.2.31] of the Apache Tomcat Native library is installed, while Tomcat requires version [1.2.34]
+2023-11-27 11:22:25 [main] DEBUG c.sapiece.filter.JwtAuthorizeFilter - Filter 'jwtAuthorizeFilter' configured for use
+2023-11-27 11:22:27 [main] DEBUG o.s.w.s.m.m.a.RequestMappingHandlerMapping - 3 mappings in 'requestMappingHandlerMapping'
+2023-11-27 11:22:27 [main] DEBUG o.s.w.s.h.SimpleUrlHandlerMapping - Patterns [/webjars/**, /**] in 'resourceHandlerMapping'
+2023-11-27 11:22:27 [main] DEBUG o.s.w.s.m.m.a.RequestMappingHandlerAdapter - ControllerAdvice beans: 0 @ModelAttribute, 0 @InitBinder, 1 RequestBodyAdvice, 1 ResponseBodyAdvice
+2023-11-27 11:22:27 [main] DEBUG o.s.w.s.m.m.a.ExceptionHandlerExceptionResolver - ControllerAdvice beans: 0 @ExceptionHandler, 1 ResponseBodyAdvice
+2023-11-27 11:22:27 [main] INFO  c.sapiece.ProjectBackendApplication - Started ProjectBackendApplication in 5.763 seconds (process running for 8.942)
+2023-11-27 11:22:49 [http-nio-8080-exec-1] INFO  o.s.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+2023-11-27 11:22:49 [http-nio-8080-exec-1] DEBUG o.s.web.servlet.DispatcherServlet - Detected StandardServletMultipartResolver
+2023-11-27 11:22:49 [http-nio-8080-exec-1] DEBUG o.s.web.servlet.DispatcherServlet - Detected AcceptHeaderLocaleResolver
+2023-11-27 11:22:49 [http-nio-8080-exec-1] DEBUG o.s.web.servlet.DispatcherServlet - Detected FixedThemeResolver
+2023-11-27 11:22:49 [http-nio-8080-exec-1] DEBUG o.s.web.servlet.DispatcherServlet - Detected org.springframework.web.servlet.view.DefaultRequestToViewNameTranslator@474d8dbd
+2023-11-27 11:22:49 [http-nio-8080-exec-1] DEBUG o.s.web.servlet.DispatcherServlet - Detected org.springframework.web.servlet.support.SessionFlashMapManager@44ccfdc7
+2023-11-27 11:22:49 [http-nio-8080-exec-1] DEBUG o.s.web.servlet.DispatcherServlet - enableLoggingRequestDetails='false': request parameters and headers will be masked to prevent unsafe logging of potentially sensitive data
+2023-11-27 11:22:49 [http-nio-8080-exec-1] INFO  o.s.web.servlet.DispatcherServlet - Completed initialization in 2 ms
+2023-11-27 11:22:50 [http-nio-8080-exec-1] DEBUG o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped to com.sapiece.question.controller.QuestionController#fetchQuestions()
+2023-11-27 11:22:50 [http-nio-8080-exec-1] DEBUG o.s.web.servlet.DispatcherServlet - GET "/api/question/fetch", parameters={}
+2023-11-27 11:22:50 [http-nio-8080-exec-1] DEBUG o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped to com.sapiece.question.controller.QuestionController#fetchQuestions()
+2023-11-27 11:22:51 [http-nio-8080-exec-1] DEBUG o.s.w.s.m.m.a.HttpEntityMethodProcessor - Using 'application/json', given [application/json, application/xhtml+xml, application/xml;q=0.9, */*;q=0.8] and supported [application/json, application/*+json]
+2023-11-27 11:22:51 [http-nio-8080-exec-1] DEBUG o.s.w.s.m.m.a.HttpEntityMethodProcessor - Writing [[Question(questionId=64, type=single_choice, content=马尔贝克是哪个国家特有的葡萄酒品种？, options=A.南非,B.意大利,C.阿根廷,D. (truncated)...]
+2023-11-27 11:22:51 [http-nio-8080-exec-1] DEBUG o.s.web.servlet.DispatcherServlet - Completed 200 OK
+2023-11-27 11:29:25 [http-nio-8080-exec-4] DEBUG o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped to com.sapiece.question.controller.QuestionController#fetchQuestions()
+2023-11-27 11:29:25 [http-nio-8080-exec-4] DEBUG o.s.web.servlet.DispatcherServlet - GET "/api/question/fetch", parameters={}
+2023-11-27 11:29:25 [http-nio-8080-exec-4] DEBUG o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped to com.sapiece.question.controller.QuestionController#fetchQuestions()
+2023-11-27 11:29:25 [http-nio-8080-exec-4] DEBUG o.s.w.s.m.m.a.HttpEntityMethodProcessor - Using 'application/json', given [application/json, application/xhtml+xml, application/xml;q=0.9, */*;q=0.8] and supported [application/json, application/*+json]
+2023-11-27 11:29:25 [http-nio-8080-exec-4] DEBUG o.s.w.s.m.m.a.HttpEntityMethodProcessor - Writing [[Question(questionId=72, type=single_choice, content=通常情况下，下列哪种葡萄酒会在瓶中进行二次发酵？, options=A.赤霞珠,B.马尔贝克, (truncated)...]
+2023-11-27 11:29:25 [http-nio-8080-exec-4] DEBUG o.s.web.servlet.DispatcherServlet - Completed 200 OK
+2023-11-27 11:29:51 [http-nio-8080-exec-2] DEBUG o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped to com.sapiece.question.controller.QuestionController#fetchQuestions()
+2023-11-27 11:29:51 [http-nio-8080-exec-2] DEBUG o.s.web.servlet.DispatcherServlet - GET "/api/question/fetch", parameters={}
+2023-11-27 11:29:51 [http-nio-8080-exec-2] DEBUG o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped to com.sapiece.question.controller.QuestionController#fetchQuestions()
+2023-11-27 11:29:51 [http-nio-8080-exec-2] DEBUG o.s.w.s.m.m.a.HttpEntityMethodProcessor - Using 'application/json', given [application/json, application/xhtml+xml, application/xml;q=0.9, */*;q=0.8] and supported [application/json, application/*+json]
+2023-11-27 11:29:51 [http-nio-8080-exec-2] DEBUG o.s.w.s.m.m.a.HttpEntityMethodProcessor - Writing [[Question(questionId=79, type=single_choice, content=下列哪种葡萄酒通常以干型和半干型最为著名？, options=A.霞多丽,B.赤霞珠,C.佳美 (truncated)...]
+2023-11-27 11:29:51 [http-nio-8080-exec-2] DEBUG o.s.web.servlet.DispatcherServlet - Completed 200 OK
+2023-11-27 11:30:56 [http-nio-8080-exec-6] WARN  o.m.s.mapper.ClassPathMapperScanner - No MyBatis mapper was found in '[com.sapiece.user.mapper, com.sapiece.question.mapper]' package. Please check your configuration.
+2023-11-27 11:30:56 [http-nio-8080-exec-6] DEBUG o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped to com.sapiece.question.controller.QuestionController#fetchQuestions()
+2023-11-27 11:30:56 [http-nio-8080-exec-6] DEBUG o.s.web.servlet.DispatcherServlet - Detected StandardServletMultipartResolver
+2023-11-27 11:30:56 [http-nio-8080-exec-6] DEBUG o.s.web.servlet.DispatcherServlet - Detected AcceptHeaderLocaleResolver
+2023-11-27 11:30:56 [http-nio-8080-exec-6] DEBUG o.s.web.servlet.DispatcherServlet - Detected FixedThemeResolver
+2023-11-27 11:30:56 [http-nio-8080-exec-6] DEBUG o.s.web.servlet.DispatcherServlet - Detected org.springframework.web.servlet.view.DefaultRequestToViewNameTranslator@474d8dbd
+2023-11-27 11:30:56 [http-nio-8080-exec-6] DEBUG o.s.web.servlet.DispatcherServlet - Detected org.springframework.web.servlet.support.SessionFlashMapManager@44ccfdc7
+2023-11-27 11:30:56 [http-nio-8080-exec-6] DEBUG o.s.web.servlet.DispatcherServlet - GET "/api/question/fetch", parameters={}
+2023-11-27 11:30:56 [http-nio-8080-exec-6] DEBUG o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped to com.sapiece.question.controller.QuestionController#fetchQuestions()
+2023-11-27 11:30:56 [http-nio-8080-exec-6] DEBUG o.s.w.s.m.m.a.HttpEntityMethodProcessor - Using 'application/json', given [application/json, application/xhtml+xml, application/xml;q=0.9, */*;q=0.8] and supported [application/json, application/*+json]
+2023-11-27 11:30:56 [http-nio-8080-exec-6] DEBUG o.s.w.s.m.m.a.HttpEntityMethodProcessor - Writing [[Question(questionId=87, type=single_choice, content=下列哪种葡萄酒通常以干型和半干型最为著名？, options=A.佳美,B.霞多丽,C.雷司令 (truncated)...]
+2023-11-27 11:30:56 [http-nio-8080-exec-6] DEBUG o.s.web.servlet.DispatcherServlet - Completed 200 OK

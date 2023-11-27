@@ -17,3 +17,12 @@ spring:
 mybatis-plus:
   type-aliases-package: com.sapiece.entity.dto
   mapper-locations: classpath:mybatis-plus/mapping/*.xml
+  configuration:
+    log-impl: org.apache.ibatis.logging.stdout.StdOutImpl
+logging:
+  level:
+    root: WARN
+    org.springframework.web: DEBUG
+    com.sapiece: TRACE
+  file:
+    name: D:/idea/GraduationDesign/app.log
