@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectStorage">
+    <option name="prefixUrlList">
+      <list>
+        <PrefixUrl>
+          <option name="moduleName" value="project-backend" />
+          <option name="prefixUrl" value="http://localhost:8080" />
+          <option name="rowIndex" value="0" />
+        </PrefixUrl>
+      </list>
+    </option>
+  </component>
+</project>

@@ -15,4 +15,5 @@ public class Const {
     public static final int ESSAY=6;
     public static final int MULTIPLE_CHOICE =4;
     public static final int SINGLE_CHOICE =8;
+    public static final String ORIGINAL_REQUEST="http://localhost:5173";
 }
