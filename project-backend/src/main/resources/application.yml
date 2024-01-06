@@ -1,7 +1,25 @@
 spring:
+  web:
+    verify:
+      mail-limit: 60
+    flow:
+      period: 3
+      limit: 50
+      block: 30
+  mail:
+    host: smtp.163.com
+    username: 17685219818@163.com
+    password: MLIYLUDOXPUILIFU
+  rabbitmq:
+    addresses: 192.168.100.128
+    username: admin
+    password: admin
+    virtual-host: /
+    port: 5672
+
   datasource:
     driver-class-name: com.mysql.cj.jdbc.Driver
-    url: jdbc:mysql://192.168.100.140:3306/graduation_design
+    url: jdbc:mysql://192.168.100.128:3306/graduation_design
     username: root
     password: 159357
   security:
@@ -10,7 +28,7 @@ spring:
       expire-time: 5
   data:
     redis:
-      url: redis://159357@192.168.100.140:6379
+      url: redis://159357@192.168.100.128:6379
       host: 6379
       username: root
       password: 159357
@@ -26,3 +44,7 @@ logging:
     com.sapiece: TRACE
   file:
     name: D:/idea/GraduationDesign/app.log
+springdoc:
+  paths-to-match: /api/**
+  swagger-ui:
+    operations-sorter: alpha

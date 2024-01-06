@@ -1,18 +1,27 @@
-import { createRouter, createWebHistory } from 'vue-router'
+import {createRouter, createWebHistory} from 'vue-router'
 import {unauthorized} from "@/axios/index.js";
 
 const router = createRouter({
   history: createWebHistory(import.meta.env.BASE_URL),
   routes: [
     {
-      path: '/',
+      path: '',
       name: 'welcome',
       component: ()=>import('@/views/WelcomeHome.vue'),
       children:[
         {
-          path:'/',
+          path: '',
           name:'welcome-login',
           component:()=>import('@/views/welcome/LoginPage.vue')
+        },
+        {
+          path: '/register',
+          name: 'welcome-register',
+          component: () => import('@/views/welcome/RegisterPage.vue')
+        }, {
+          path: '/forget',
+          name: 'welcome-forget',
+          component: () => import('@/views/welcome/ForgetPage.vue')
         }
       ]
     },{
@@ -20,6 +29,10 @@ const router = createRouter({
       name:'index',
       component:()=>import('@/views/IndexView.vue'),
 
+    }, {
+      path: '/question',
+      name: 'question',
+      component: () => import('@/views/question/Fetch.vue')
     }
   ]
 })

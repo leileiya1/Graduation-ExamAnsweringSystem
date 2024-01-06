@@ -95,8 +95,27 @@ function get(url, success, failure = defaultFailure) {
     internalGet(url, accessHeader(), success, failure)
 }
 
+// 重新封装的get方法
 function unauthorized() {
     return !takeAccessToken()
 }
 
-export { post, get, login, logout, unauthorized }
+function customGet(url, successCallback) {
+    // 使用axios进行GET请求
+    axios.get(url, {
+        headers: {
+            // 从本地存储中获取token并添加到请求头中
+            'Authorization': `Bearer ${takeAccessToken()}`
+        }
+    })
+        .then(response => {
+            const data = response.data;
+            // 检查响应的code是否为200
+            if (response.status === 200) {
+                // 如果是200，调用传入的successCallback
+                successCallback(data);
+            }
+        });
+}
+
+export {post, get, login, logout, unauthorized, customGet}

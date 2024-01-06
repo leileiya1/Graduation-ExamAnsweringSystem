@@ -9,6 +9,7 @@ import lombok.NoArgsConstructor;
 
 import java.time.LocalDate;
 import java.time.LocalDateTime;
+import java.util.Date;
 
 /**
  * @Author SAPiece
@@ -31,5 +32,5 @@ public class Account {
     private String email;
     private String phone;
     private Integer age;
-    private LocalDate registerTime;
+    private Date registerTime;
 }

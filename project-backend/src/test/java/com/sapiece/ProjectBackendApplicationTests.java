@@ -6,6 +6,7 @@ import com.sapiece.user.mapper.AccountMapper;
 import jakarta.annotation.Resource;
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;
+import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 
 import java.util.List;
 
@@ -17,8 +18,7 @@ class ProjectBackendApplicationTests {
 QuestionMapper questionsMapper;
     @Test
     void contextLoads() {
-        List<Question> questions = questionsMapper.selectList(null);
-        questions.forEach(System.out::println);
+        System.out.println(new BCryptPasswordEncoder().encode("123"));
     }
 
 }

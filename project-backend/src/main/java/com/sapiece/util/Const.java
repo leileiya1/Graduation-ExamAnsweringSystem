@@ -16,4 +16,13 @@ public class Const {
     public static final int MULTIPLE_CHOICE =4;
     public static final int SINGLE_CHOICE =8;
     public static final String ORIGINAL_REQUEST="http://localhost:5173";
+    //消息队列
+    public final static String MQ_MAIL = "mail";
+    //邮件验证码
+    public final static String VERIFY_EMAIL_LIMIT = "verify:email:limit:";
+    public final static String VERIFY_EMAIL_DATA = "verify:email:data:";
+    //请求自定义属性
+    public final static String ATTR_USER_ID = "userId";
+    //用户角色
+    public final static String ROLE_DEFAULT = "user";
 }

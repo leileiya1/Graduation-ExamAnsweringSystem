@@ -1,48 +1,19 @@
-2023-12-28 11:41:04 [http-nio-8080-exec-1] INFO  o.s.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
-2023-12-28 11:41:04 [http-nio-8080-exec-1] DEBUG o.s.web.servlet.DispatcherServlet - Detected StandardServletMultipartResolver
-2023-12-28 11:41:04 [http-nio-8080-exec-1] DEBUG o.s.web.servlet.DispatcherServlet - Detected AcceptHeaderLocaleResolver
-2023-12-28 11:41:04 [http-nio-8080-exec-1] DEBUG o.s.web.servlet.DispatcherServlet - Detected FixedThemeResolver
-2023-12-28 11:41:04 [http-nio-8080-exec-1] DEBUG o.s.web.servlet.DispatcherServlet - Detected org.springframework.web.servlet.view.DefaultRequestToViewNameTranslator@3e4ba08c
-2023-12-28 11:41:04 [http-nio-8080-exec-1] DEBUG o.s.web.servlet.DispatcherServlet - Detected org.springframework.web.servlet.support.SessionFlashMapManager@eb0af8
-2023-12-28 11:41:04 [http-nio-8080-exec-1] DEBUG o.s.web.servlet.DispatcherServlet - enableLoggingRequestDetails='false': request parameters and headers will be masked to prevent unsafe logging of potentially sensitive data
-2023-12-28 11:41:04 [http-nio-8080-exec-1] INFO  o.s.web.servlet.DispatcherServlet - Completed initialization in 3 ms
-2023-12-28 12:00:25 [http-nio-8080-exec-2] DEBUG o.s.w.s.h.SimpleUrlHandlerMapping - Mapped to ResourceHttpRequestHandler [classpath [META-INF/resources/], classpath [resources/], classpath [static/], classpath [public/], ServletContext [/]]
-2023-12-28 12:00:25 [http-nio-8080-exec-2] DEBUG o.s.web.servlet.DispatcherServlet - OPTIONS "/api/auth/logout", parameters={}
-2023-12-28 12:00:25 [http-nio-8080-exec-2] DEBUG o.s.w.s.h.SimpleUrlHandlerMapping - Mapped to ResourceHttpRequestHandler [classpath [META-INF/resources/], classpath [resources/], classpath [static/], classpath [public/], ServletContext [/]]
-2023-12-28 12:00:25 [http-nio-8080-exec-2] DEBUG o.s.web.servlet.DispatcherServlet - Completed 200 OK
-2023-12-28 22:13:18 [lettuce-nioEventLoop-4-2] WARN  i.l.core.protocol.ConnectionWatchdog - Cannot reconnect to [192.168.100.140/<unresolved>:6379]: java.nio.channels.ClosedChannelException
-java.nio.channels.ClosedChannelException: null
-	at io.netty.channel.nio.AbstractNioChannel.doClose(AbstractNioChannel.java:502)
-	at io.netty.channel.socket.nio.NioSocketChannel.doClose(NioSocketChannel.java:349)
-	at io.netty.channel.AbstractChannel$AbstractUnsafe.doClose0(AbstractChannel.java:754)
-	at io.netty.channel.AbstractChannel$AbstractUnsafe.close(AbstractChannel.java:731)
-	at io.netty.channel.AbstractChannel$AbstractUnsafe.close(AbstractChannel.java:620)
-	at io.netty.channel.DefaultChannelPipeline$HeadContext.close(DefaultChannelPipeline.java:1352)
-	at io.netty.channel.AbstractChannelHandlerContext.invokeClose(AbstractChannelHandlerContext.java:749)
-	at io.netty.channel.AbstractChannelHandlerContext.access$1200(AbstractChannelHandlerContext.java:61)
-	at io.netty.channel.AbstractChannelHandlerContext$11.run(AbstractChannelHandlerContext.java:732)
-	at io.netty.util.concurrent.AbstractEventExecutor.runTask(AbstractEventExecutor.java:173)
-	at io.netty.util.concurrent.AbstractEventExecutor.safeExecute(AbstractEventExecutor.java:166)
-	at io.netty.util.concurrent.SingleThreadEventExecutor.runAllTasks(SingleThreadEventExecutor.java:470)
-	at io.netty.channel.nio.NioEventLoop.run(NioEventLoop.java:569)
-	at io.netty.util.concurrent.SingleThreadEventExecutor$4.run(SingleThreadEventExecutor.java:997)
-	at io.netty.util.internal.ThreadExecutorMap$2.run(ThreadExecutorMap.java:74)
-	at io.netty.util.concurrent.FastThreadLocalRunnable.run(FastThreadLocalRunnable.java:30)
-	at java.base/java.lang.Thread.run(Thread.java:1583)
-2023-12-28 22:13:18 [lettuce-nioEventLoop-4-3] WARN  i.l.core.protocol.ConnectionWatchdog - Cannot reconnect to [192.168.100.140/<unresolved>:6379]: No route to host: no further information: /192.168.100.140:6379
-io.netty.channel.AbstractChannel$AnnotatedNoRouteToHostException: No route to host: no further information: /192.168.100.140:6379
-Caused by: java.net.NoRouteToHostException: No route to host: no further information
-	at java.base/sun.nio.ch.Net.pollConnect(Native Method)
-	at java.base/sun.nio.ch.Net.pollConnectNow(Net.java:682)
-	at java.base/sun.nio.ch.SocketChannelImpl.finishConnect(SocketChannelImpl.java:973)
-	at io.netty.channel.socket.nio.NioSocketChannel.doFinishConnect(NioSocketChannel.java:337)
-	at io.netty.channel.nio.AbstractNioChannel$AbstractNioUnsafe.finishConnect(AbstractNioChannel.java:334)
-	at io.netty.channel.nio.NioEventLoop.processSelectedKey(NioEventLoop.java:776)
-	at io.netty.channel.nio.NioEventLoop.processSelectedKeysOptimized(NioEventLoop.java:724)
-	at io.netty.channel.nio.NioEventLoop.processSelectedKeys(NioEventLoop.java:650)
-	at io.netty.channel.nio.NioEventLoop.run(NioEventLoop.java:562)
-	at io.netty.util.concurrent.SingleThreadEventExecutor$4.run(SingleThreadEventExecutor.java:997)
-	at io.netty.util.internal.ThreadExecutorMap$2.run(ThreadExecutorMap.java:74)
-	at io.netty.util.concurrent.FastThreadLocalRunnable.run(FastThreadLocalRunnable.java:30)
-	at java.base/java.lang.Thread.run(Thread.java:1583)
-2023-12-28 22:13:25 [HikariPool-1 housekeeper] WARN  com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=9h44m19s906ms546µs600ns).
+2024-01-06 12:49:25 [main] INFO  c.sapiece.ProjectBackendApplication - Starting ProjectBackendApplication using Java 21.0.1 with PID 2872 (D:\idea\GraduationDesign\project-backend\target\classes started by 周磊磊 in D:\idea\GraduationDesign)
+2024-01-06 12:49:25 [main] DEBUG c.sapiece.ProjectBackendApplication - Running with Spring Boot v3.1.5, Spring v6.0.13
+2024-01-06 12:49:25 [main] INFO  c.sapiece.ProjectBackendApplication - No active profile set, falling back to 1 default profile: "default"
+2024-01-06 12:49:28 [main] ERROR o.a.c.core.AprLifecycleListener - An incompatible version [1.2.31] of the Apache Tomcat Native library is installed, while Tomcat requires version [1.2.34]
+2024-01-06 12:49:29 [main] DEBUG c.sapiece.filter.JwtAuthorizeFilter - Filter 'jwtAuthorizeFilter' configured for use
+2024-01-06 12:49:30 [main] DEBUG o.s.w.s.m.m.a.RequestMappingHandlerMapping - 11 mappings in 'requestMappingHandlerMapping'
+2024-01-06 12:49:30 [main] DEBUG o.s.w.s.h.SimpleUrlHandlerMapping - Patterns [/webjars/**, /**, /swagger-ui*/*swagger-initializer.js, /swagger-ui*/**] in 'resourceHandlerMapping'
+2024-01-06 12:49:30 [main] DEBUG o.s.w.s.m.m.a.RequestMappingHandlerAdapter - ControllerAdvice beans: 0 @ModelAttribute, 0 @InitBinder, 1 RequestBodyAdvice, 1 ResponseBodyAdvice
+2024-01-06 12:49:30 [main] DEBUG o.s.w.s.m.m.a.ExceptionHandlerExceptionResolver - ControllerAdvice beans: 2 @ExceptionHandler, 1 ResponseBodyAdvice
+2024-01-06 12:49:31 [main] WARN  o.s.c.LocalVariableTableParameterNameDiscoverer - Using deprecated '-debug' fallback for parameter name resolution. Compile the affected code with '-parameters' instead or avoid its introspection: org.springframework.amqp.rabbit.core.RabbitAdmin
+2024-01-06 12:49:31 [main] INFO  c.sapiece.ProjectBackendApplication - Started ProjectBackendApplication in 6.858 seconds (process running for 9.176)
+2024-01-06 12:50:03 [http-nio-8080-exec-2] INFO  o.s.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+2024-01-06 12:50:03 [http-nio-8080-exec-2] DEBUG o.s.web.servlet.DispatcherServlet - Detected StandardServletMultipartResolver
+2024-01-06 12:50:03 [http-nio-8080-exec-2] DEBUG o.s.web.servlet.DispatcherServlet - Detected AcceptHeaderLocaleResolver
+2024-01-06 12:50:03 [http-nio-8080-exec-2] DEBUG o.s.web.servlet.DispatcherServlet - Detected FixedThemeResolver
+2024-01-06 12:50:03 [http-nio-8080-exec-2] DEBUG o.s.web.servlet.DispatcherServlet - Detected org.springframework.web.servlet.view.DefaultRequestToViewNameTranslator@52ec6ca7
+2024-01-06 12:50:03 [http-nio-8080-exec-2] DEBUG o.s.web.servlet.DispatcherServlet - Detected org.springframework.web.servlet.support.SessionFlashMapManager@3fe3e0b4
+2024-01-06 12:50:03 [http-nio-8080-exec-2] DEBUG o.s.web.servlet.DispatcherServlet - enableLoggingRequestDetails='false': request parameters and headers will be masked to prevent unsafe logging of potentially sensitive data
+2024-01-06 12:50:03 [http-nio-8080-exec-2] INFO  o.s.web.servlet.DispatcherServlet - Completed initialization in 2 ms
