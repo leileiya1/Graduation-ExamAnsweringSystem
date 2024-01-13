@@ -10,3 +10,22 @@ export const useCounterStore = defineStore('counter', () => {
 
   return { count, doubleCount, increment }
 })
+export const useCountdownStore = defineStore('countdown', {
+  state: () => ({
+    countdownFinished: false,
+    totalSeconds:1800
+  }),
+  actions: {
+    finishCountdown() {
+      this.countdownFinished = true;
+    },
+    resetCountdown() {
+      this.countdownFinished = false;
+      this.totalSeconds = 1800; // 重置倒计时时间
+    },
+    startCountdown(seconds = 1800) {
+      this.resetCountdown();
+      this.totalSeconds = seconds;
+    }
+  }
+});

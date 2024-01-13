@@ -28,11 +28,23 @@ const router = createRouter({
       path:'/index',
       name:'index',
       component:()=>import('@/views/IndexView.vue'),
-
-    }, {
-      path: '/question',
-      name: 'question',
-      component: () => import('@/views/question/Fetch.vue')
+      children: [{
+        name: 'scoreAnalysis',
+        path: 'score-analysis',
+        component: () => import('@/views/index/ScoreAnalysis.vue')
+      }, {
+        path: 'start-test',
+        name: 'startTest',
+        component: () => import('@/views/question/Fetch.vue')
+      }, {
+        path:'score-record',
+        name: 'scoreRecord',
+        component:()=>import('@/views/index/TestRecord.vue')
+      }, {
+        path: 'exam-record',
+        name: 'examRecord',
+        component: () => import('@/views/question/ExamRecords.vue')
+      }, ]
     }
   ]
 })

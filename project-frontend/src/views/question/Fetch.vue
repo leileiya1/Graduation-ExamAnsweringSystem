@@ -1,50 +1,69 @@
 <script setup>
-import {reactive, ref} from "vue";
+import {onMounted, reactive, ref,nextTick} from "vue";
 import {customGet} from "@/axios/index.js";
+import {ElButton, ElDialog} from 'element-plus';
+import TestPage from "@/views/question/TestPage.vue";
+import {CircleCloseFilled} from "@element-plus/icons-vue";
+import CountDownTimer from "@/views/question/CountDownTimer.vue";
+import {useCountdownStore} from "@/stores/counter.js";
+
+const testPageRef = ref(null)
+const dataReady = ref(false)
+const dialogVisible = ref(false);
+const store = useCountdownStore()
 const examStarted = ref(false);  // 跟踪考试是否开始
-const question = reactive({
-  questionId: null,
-  type: null,
-  content: null,
-  options: null,
-  answer: null,
-  isSelected: null
-})
 let questions=reactive([])
 
+//axios成功后的请求处理将获得的data封装到questions里面然后传递给子组件TestPage中
 function handleSuccess(data) {
-  questions.splice(0, questions.length, ...data);
-  console.log('Questions received:', questions);
+  questions = data
+  console.log(questions)
 }
-
 function fetch() {
   examStarted.value=true
   customGet('/api/question/fetch', handleSuccess)
 }
 
+onMounted(() => {
+  fetch();
+  setTimeout(() => {
+    dataReady.value = true
+  }, 60)
+})
+const handleCountdownFinished = async () => {
+  dialogVisible.value = false
+  await nextTick()
+  if (testPageRef.value && testPageRef.value?.handleSubmit) {
+    testPageRef.value.handleSubmit();
+  }
+  store.resetCountdown()
+};
 </script>
-
 <template>
-
   <div>
-    <h1>Quiz</h1>
-    <!-- 用户点击此按钮后开始考试 -->
-    <el-button v-if="!examStarted" @click="fetch">Start Exam</el-button>
-    <div v-if="examStarted">
-      <!-- 仅当考试开始后显示题目 -->
-      <div v-if="questions.length > 0">
-        <div v-for="question in questions" :key="question.questionId">
-          <h3>{{ question.content }}</h3>
-          <ul>
-            <li v-for="(option, index) in question.options.split(',')" :key="index">{{ option }}</li>
-          </ul>
+    <el-button type="primary" @click="dialogVisible = true">开始考试</el-button>
+    <el-dialog destroy-on-close v-model="dialogVisible" :fullscreen="true" :show-close="false" @close="dialogVisible=false">
+      <template #header="{ close, titleId, titleClass }">
+        <div class="my-header">
+          <h5 :id="titleId" :class="titleClass">考试中...</h5>
+          <CountDownTimer @countdown-finished="handleCountdownFinished"/>
+          <el-button type="danger" @click="close">
+            <el-icon class="el-icon--left">
+              <CircleCloseFilled/>
+            </el-icon>
+            退出考试
+          </el-button>
         </div>
-      </div>
-      <p v-else>Loading questions...</p>
-    </div>
+      </template>
+      <TestPage ref="testPageRef" v-if="dataReady" :questions="questions"/>
+    </el-dialog>
   </div>
 </template>
 
 <style scoped>
-
+.my-header {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
 </style>

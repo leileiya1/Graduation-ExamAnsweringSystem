@@ -14,12 +14,12 @@ import CarouselChart from "@/views/welcome/CarouselChart.vue";
         <component :is="Component" style="height: 100%;"/>
       </transition>
     </router-view>
-
   </div>
   </div>
 </template>
 
 <style scoped>
+
 .carousel-container{
   width: 100%; /* 或其他具体尺寸 */
   height: 500px; /* 或其他具体尺寸 */
