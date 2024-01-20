@@ -17,13 +17,11 @@ let questions=reactive([])
 //axios成功后的请求处理将获得的data封装到questions里面然后传递给子组件TestPage中
 function handleSuccess(data) {
   questions = data
-  console.log(questions)
 }
 function fetch() {
   examStarted.value=true
   customGet('/api/question/fetch', handleSuccess)
 }
-
 onMounted(() => {
   fetch();
   setTimeout(() => {
@@ -40,7 +38,7 @@ const handleCountdownFinished = async () => {
 };
 </script>
 <template>
-  <div>
+  <div >
     <el-button type="primary" @click="dialogVisible = true">开始考试</el-button>
     <el-dialog destroy-on-close v-model="dialogVisible" :fullscreen="true" :show-close="false" @close="dialogVisible=false">
       <template #header="{ close, titleId, titleClass }">
@@ -50,6 +48,7 @@ const handleCountdownFinished = async () => {
           <el-button type="danger" @click="close">
             <el-icon class="el-icon--left">
               <CircleCloseFilled/>
+
             </el-icon>
             退出考试
           </el-button>

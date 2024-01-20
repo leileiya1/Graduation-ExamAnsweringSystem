@@ -1,19 +1,11 @@
-import { ref, computed } from 'vue'
-import { defineStore } from 'pinia'
+import {defineStore} from 'pinia'
 
-export const useCounterStore = defineStore('counter', () => {
-  const count = ref(0)
-  const doubleCount = computed(() => count.value * 2)
-  function increment() {
-    count.value++
-  }
-
-  return { count, doubleCount, increment }
-})
 export const useCountdownStore = defineStore('countdown', {
   state: () => ({
     countdownFinished: false,
-    totalSeconds:1800
+    totalSeconds: 1800,//考试倒计时设计
+    username: null,//当前用户
+    userId: null,
   }),
   actions: {
     finishCountdown() {
@@ -23,9 +15,30 @@ export const useCountdownStore = defineStore('countdown', {
       this.countdownFinished = false;
       this.totalSeconds = 1800; // 重置倒计时时间
     },
-    startCountdown(seconds = 1800) {
-      this.resetCountdown();
-      this.totalSeconds = seconds;
+    setUsername(username) {
+      this.username = username;
+    }, setUserId(id) {
+      this.userId = id
+    }
+  }
+});
+export const usersCountdownStore = defineStore('answerData', {
+  state: () => ({
+    testResult: ''
+  }), actions: {
+    setTestResult(testTotal) {
+      this.testResult = testTotal
+    }
+  }
+})
+export const useProgressStore = defineStore('progress', {
+  state: () => ({
+    progress: 0,
+  }),
+  actions: {
+    updateProgress(questions, userAnswers) {
+      const answeredQuestions = questions.filter(q => userAnswers[q.questionId].toString().trim() !== '').length;
+      this.progress = Math.round((answeredQuestions / questions.length) * 100);
     }
   }
 });

@@ -3,8 +3,12 @@
 import {Lock, User} from "@element-plus/icons-vue";
 import {reactive, ref} from "vue";
 import {login} from "@/axios/index.js";
+import {useCountdownStore} from "@/stores/counter.js";
 import router from "@/router/index.js";
+
+const store = useCountdownStore()
 const form=reactive({
+  id: null,
   username:'',
   password:'',
   remember:false
@@ -22,14 +26,17 @@ const rule={
 }
 const formRef=ref()
 function userLogin(){
- // console.log("-----------")
+
   formRef.value.validate((valid)=>{
     if (valid){
-      login(form.username,form.password,form.remember,()=>router.push('/index'))
-
+      login(form.username, form.password, form.remember, () => {
+        store.setUsername(form.username)
+        router.push('/index')
+      })
     }
   })
 }
+
 </script>
 
 <template>

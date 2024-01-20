@@ -86,8 +86,7 @@ public class SecurityConfiguration {
         vo.setRole(account.getRole());
         vo.setToken(token);
         vo.setUsername(account.getUsername());
-        HttpSession session = request.getSession();
-        session.setAttribute("user", account.getUsername());
+        vo.setId(account.getUserId());
         response.getWriter().write(RestBean.success(vo).asJsonString());
     }
 

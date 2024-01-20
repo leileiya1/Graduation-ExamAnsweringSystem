@@ -8,8 +8,6 @@ import lombok.Data;
 import lombok.NoArgsConstructor;
 
 import java.time.LocalDate;
-import java.time.LocalDateTime;
-import java.util.Date;
 
 /**
  * @Author SAPiece
@@ -32,5 +30,6 @@ public class Account {
     private String email;
     private String phone;
     private Integer age;
-    private Date registerTime;
+    private LocalDate registerTime;
+    private byte[] avatar; // BLOB字段用户头像
 }

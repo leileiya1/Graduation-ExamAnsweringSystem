@@ -14,8 +14,10 @@ import java.util.Date;
  */
 @Data
 public class AuthorizeVO {
+    private Integer id;
     String username;
     String role;
     String token;
     Date expire;
+
 }

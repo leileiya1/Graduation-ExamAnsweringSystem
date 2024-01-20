@@ -1,7 +1,7 @@
 <script setup>
-import {onMounted, onUnmounted, ref,watch,computed} from "vue";
+import {computed, onMounted, onUnmounted, ref, watch} from "vue";
 import {useCountdownStore} from "@/stores/counter.js";
-
+import CompletionProgress from "@/views/question/CompletionProgress.vue";
 
 let timer = null;
 const store = useCountdownStore();
@@ -52,7 +52,9 @@ watch(() => store.totalSeconds, (newTime) => {
 <template>
   <div class="countdown" :class="{ 'red': isLessThanFifteenMinutes }">
     {{ formattedTime }}
+    <CompletionProgress/>
   </div>
+
 </template>
 
 <style scoped>

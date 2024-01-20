@@ -20,9 +20,7 @@ import org.springframework.security.core.userdetails.UsernameNotFoundException;
 import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.stereotype.Service;
 
-import javax.xml.crypto.Data;
-import java.util.Date;
-import java.util.Locale;
+import java.time.LocalDate;
 import java.util.Map;
 import java.util.Random;
 import java.util.concurrent.TimeUnit;
@@ -103,7 +101,7 @@ public class AccountServiceImpl extends ServiceImpl<AccountMapper, Account> impl
         if (this.existsAccountByUsername(username)) return "该用户名已被他人使用，换一个吧";
         String password = passwordEncoder.encode(info.getPassword());
         Account account = new Account(null, info.getUsername(),
-                password, Const.ROLE_DEFAULT, email, info.getIphone(), info.getAge(), new Date());
+                password, Const.ROLE_DEFAULT, email, info.getIphone(), info.getAge(), LocalDate.now(),null);
         if (!this.save(account)) {
             return "内部错误，注册失败";
         } else {

@@ -8,6 +8,8 @@ import com.sapiece.question.service.ExamResultService;
 import com.sapiece.user.mapper.AccountMapper;
 import org.springframework.stereotype.Service;
 
+import java.time.LocalDateTime;
+
 /**
  * @Author SAPiece
  * @Create 2023-11-18 20:07
@@ -18,4 +20,9 @@ import org.springframework.stereotype.Service;
  */
 @Service
 public class ExamResultServiceImpl extends ServiceImpl<ExamResultMapper, ExamResult> implements ExamResultService {
+    @Override
+    public boolean saveOrUpdate(ExamResult entity) {
+        entity.setTestTime(LocalDateTime.now());
+        return super.saveOrUpdate(entity);
+    }
 }

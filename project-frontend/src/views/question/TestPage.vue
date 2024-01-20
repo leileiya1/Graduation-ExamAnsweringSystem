@@ -1,16 +1,45 @@
 <script setup>
-import {computed, reactive, ref, watch} from 'vue'
-import {useCountdownStore} from "@/stores/counter.js";
+import {computed, reactive, onMounted,ref, watch,watchEffect} from 'vue'
+import {useCountdownStore, useProgressStore, usersCountdownStore} from "@/stores/counter.js";
 import levenshtein from 'fast-levenshtein'
 import router from "@/router/index.js";
+import {post} from "@/axios/index.js";
+//进度条
+const progressStore = useProgressStore();
 const props = defineProps({
   questions: Array
 })
+
+let formattedUserAnswers = ref(''); // 独立的响应式对象来存储格式化后的答案
+const store = useCountdownStore();
+const test = usersCountdownStore();
+/*
+* 封装结果然后传递给数据库
+* */
+
+const examsData = {
+  // 填充 Exams 相关数据
+  name: store.username // 考试名称
+};
+
+const examResultData = {
+  // 填充 ExamResult 相关数据
+  examId: 1, // 考试ID
+  userId: store.userId, // 用户ID
+  name:store.username,
+  userAnswers: '', // 用户答案
+  score: null, // 得分
+};
+
+const examSubmissionData = {
+  exams: examsData,
+  result: examResultData
+};
+
+
 //提交时的dialog
 let showDialog=ref(false)
 const tabs = ['single_choice', 'multiple_choice', 'fill_in_the_blank', 'essay'];
-//用于监听CountDownTimer组件倒计时变化
-const store = useCountdownStore();
 // 将 questions 转换为响应式对象
 const reactiveQuestions = reactive(props.questions);
 const activeTab = ref('single_choice');
@@ -23,8 +52,6 @@ const handleTabClick = (tabEvent) => {
     activeTab.value = tabName;
   }
 };
-//题目序号
-let globalQuestionIndex = 0;
 // 当组件初始化时，为每个问题设置一个空字符串作为初始答案
 props.questions.forEach(question => {
   if (question.type === 'multiple_choice') {
@@ -32,6 +59,12 @@ props.questions.forEach(question => {
   } else { // 包括 'single_choice', 'fill_in_the_blank', 'essay'
     userAnswers[question.questionId] = '';
   }
+});
+/*
+* 实现试题进度条
+* */
+watchEffect(() => {
+  progressStore.updateProgress(props.questions, userAnswers);
 });
 // 给每个问题添加一个全局索引
 reactiveQuestions.forEach((question, index) => {
@@ -46,7 +79,20 @@ watch(() => store.countdownFinished, (newValue) => {
     store.resetCountdown();
   }
 });
-
+//格式化问题和答案传送到数据库
+const formatUserAnswers = (questions, userAnswers) => {
+  let formattedString = '';
+  questions.forEach(question => {
+    const userAnswer = userAnswers[question.questionId];
+    const correctAnswer = question.answer || '无'; // 确保每个问题都有 'answer' 属性
+    if (userAnswer === undefined || userAnswer === null || userAnswer === '') {
+      formattedString += `id:${question.questionId}@${question.content}@answer:${correctAnswer}@userAnswer:未作答@type:${question.type}# `;
+    } else {
+      formattedString += `id:${question.questionId}@${question.content}@answer:${correctAnswer}@userAnswer:${userAnswer}@type:${question.type}# `;
+    }
+  });
+  return formattedString;
+};
 // 检查是否所有问题都被回答
 const isAllAnswered = computed(() => {
   return props.questions.every(question => {
@@ -104,10 +150,11 @@ const handleSubmit = () => {
     showDialog.value = true;
   } else {
     // 执行提交逻辑，计算总分
-    const totalScore = calculateTotalScore();
-
     // 这里可以添加其他提交逻辑，如发送数据到服务器
-    router.push('/index/exam-record')
+    examSubmissionData.result.score = calculateTotalScore()
+    formattedUserAnswers = formatUserAnswers(props.questions, userAnswers)
+    examSubmissionData.result.userAnswers = formattedUserAnswers
+    post('/api/question/result-submission', examSubmissionData, () => router.push('/index/exam-record'))
   }
 };
 
@@ -115,9 +162,13 @@ const handleSubmit = () => {
 const forceSubmit = () => {
   showDialog.value = false;
   const totalScore = calculateTotalScore();
-  console.log('总分（强制提交）：', totalScore);
-  router.push('/index/exam-record')
+  //将答案封装到formattedUserAnswers中去
+  formattedUserAnswers = formatUserAnswers(props.questions, userAnswers)
+  examSubmissionData.result.score = totalScore
+  examSubmissionData.result.userAnswers = formattedUserAnswers
+  test.setTestResult(formattedUserAnswers)
   // 这里可以添加将分数发送到服务器的逻辑
+  post('/api/question/result-submission', examSubmissionData, () => router.push('/index/exam-record'))
 };
 /*
 * 上下页的按钮逻辑
@@ -144,6 +195,7 @@ const showSubmitButton = computed(() => {
 });
 const nextPage = () => changeTab('next');
 const prevPage = () => changeTab('prev')
+
 </script>
 <template>
   <div>

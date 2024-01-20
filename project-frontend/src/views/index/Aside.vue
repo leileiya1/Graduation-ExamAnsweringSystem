@@ -4,7 +4,7 @@ import {ChatDotRound, House, Message, Promotion, Setting, Tickets} from "@elemen
 </script>
 
 <template>
-  <el-aside width="200px" class="el-aside">
+  <el-aside width="200px" class="el-aside" >
     <el-scrollbar class="scrollbar" style="min-height: 100%">
       <el-menu  router >
         <el-menu-item index="/index/start-test">

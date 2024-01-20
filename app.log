@@ -1,132 +1,134 @@
-2024-01-13 08:53:00 [main] ERROR o.s.boot.SpringApplication - Application run failed
-java.lang.NoSuchMethodError: 'boolean java.util.stream.MatchOps$2MatchSink._jr$ig$stop(java.lang.Object)'
-	at java.base/java.util.stream.MatchOps$2MatchSink.accept(MatchOps.java:119)
-	at java.base/java.lang.StringLatin1$CharsSpliterator.tryAdvance(StringLatin1.java:816)
-	at java.base/java.util.stream.IntPipeline.forEachWithCancel(IntPipeline.java:163)
-	at java.base/java.util.stream.AbstractPipeline.copyIntoWithCancel(AbstractPipeline.java:527)
-	at java.base/java.util.stream.AbstractPipeline.copyInto(AbstractPipeline.java:513)
-	at java.base/java.util.stream.AbstractPipeline.wrapAndCopyInto(AbstractPipeline.java:499)
-	at java.base/java.util.stream.MatchOps$MatchOp.evaluateSequential(MatchOps.java:230)
-	at java.base/java.util.stream.MatchOps$MatchOp.evaluateSequential(MatchOps.java:196)
-	at java.base/java.util.stream.AbstractPipeline.evaluate(AbstractPipeline.java:234)
-	at java.base/java.util.stream.IntPipeline.allMatch(IntPipeline.java:542)
-	at org.springframework.boot.context.properties.source.SystemEnvironmentPropertyMapper.isNumber(SystemEnvironmentPropertyMapper.java:103)
-	at org.springframework.boot.context.properties.source.SystemEnvironmentPropertyMapper.processElementValue(SystemEnvironmentPropertyMapper.java:99)
-	at org.springframework.boot.context.properties.source.ConfigurationPropertyName$ElementsParser.add(ConfigurationPropertyName.java:994)
-	at org.springframework.boot.context.properties.source.ConfigurationPropertyName$ElementsParser.parse(ConfigurationPropertyName.java:943)
-	at org.springframework.boot.context.properties.source.ConfigurationPropertyName.adapt(ConfigurationPropertyName.java:680)
-	at org.springframework.boot.context.properties.source.SystemEnvironmentPropertyMapper.convertName(SystemEnvironmentPropertyMapper.java:90)
-	at org.springframework.boot.context.properties.source.SystemEnvironmentPropertyMapper.map(SystemEnvironmentPropertyMapper.java:85)
-	at org.springframework.boot.context.properties.source.SpringIterableConfigurationPropertySource$Mappings.updateMappings(SpringIterableConfigurationPropertySource.java:242)
-	at org.springframework.boot.context.properties.source.SpringIterableConfigurationPropertySource$Mappings.updateMappings(SpringIterableConfigurationPropertySource.java:217)
-	at org.springframework.boot.context.properties.source.SpringIterableConfigurationPropertySource.updateMappings(SpringIterableConfigurationPropertySource.java:166)
-	at org.springframework.boot.context.properties.source.SoftReferenceConfigurationPropertyCache.get(SoftReferenceConfigurationPropertyCache.java:77)
-	at org.springframework.boot.context.properties.source.SpringIterableConfigurationPropertySource.getMappings(SpringIterableConfigurationPropertySource.java:157)
-	at org.springframework.boot.context.properties.source.SpringIterableConfigurationPropertySource.getConfigurationProperty(SpringIterableConfigurationPropertySource.java:104)
-	at org.springframework.boot.context.properties.source.ConfigurationPropertySourcesPropertySource.findConfigurationProperty(ConfigurationPropertySourcesPropertySource.java:70)
-	at org.springframework.boot.context.properties.source.ConfigurationPropertySourcesPropertySource.findConfigurationProperty(ConfigurationPropertySourcesPropertySource.java:58)
-	at org.springframework.boot.context.properties.source.ConfigurationPropertySourcesPropertySource.getProperty(ConfigurationPropertySourcesPropertySource.java:47)
-	at org.springframework.boot.env.SpringApplicationJsonEnvironmentPostProcessor$JsonPropertyValue.get(SpringApplicationJsonEnvironmentPostProcessor.java:219)
-	at java.base/java.util.stream.ReferencePipeline$3$1.accept(ReferencePipeline.java:197)
-	at java.base/java.util.Spliterators$ArraySpliterator.tryAdvance(Spliterators.java:1034)
-	at java.base/java.util.stream.ReferencePipeline.forEachWithCancel(ReferencePipeline.java:129)
-	at java.base/java.util.stream.AbstractPipeline.copyIntoWithCancel(AbstractPipeline.java:527)
-	at java.base/java.util.stream.AbstractPipeline.copyInto(AbstractPipeline.java:513)
-	at java.base/java.util.stream.AbstractPipeline.wrapAndCopyInto(AbstractPipeline.java:499)
-	at java.base/java.util.stream.FindOps$FindOp.evaluateSequential(FindOps.java:150)
-	at java.base/java.util.stream.AbstractPipeline.evaluate(AbstractPipeline.java:234)
-	at java.base/java.util.stream.ReferencePipeline.findFirst(ReferencePipeline.java:647)
-	at org.springframework.boot.env.SpringApplicationJsonEnvironmentPostProcessor.postProcessEnvironment(SpringApplicationJsonEnvironmentPostProcessor.java:99)
-	at org.springframework.boot.env.EnvironmentPostProcessorApplicationListener.onApplicationEnvironmentPreparedEvent(EnvironmentPostProcessorApplicationListener.java:109)
-	at org.springframework.boot.env.EnvironmentPostProcessorApplicationListener.onApplicationEvent(EnvironmentPostProcessorApplicationListener.java:94)
-	at org.springframework.context.event.SimpleApplicationEventMulticaster.doInvokeListener(SimpleApplicationEventMulticaster.java:174)
-	at org.springframework.context.event.SimpleApplicationEventMulticaster.invokeListener(SimpleApplicationEventMulticaster.java:167)
-	at org.springframework.context.event.SimpleApplicationEventMulticaster.multicastEvent(SimpleApplicationEventMulticaster.java:145)
-	at org.springframework.context.event.SimpleApplicationEventMulticaster.multicastEvent(SimpleApplicationEventMulticaster.java:133)
-	at org.springframework.boot.context.event.EventPublishingRunListener.multicastInitialEvent(EventPublishingRunListener.java:136)
-	at org.springframework.boot.context.event.EventPublishingRunListener.environmentPrepared(EventPublishingRunListener.java:81)
-	at org.springframework.boot.SpringApplicationRunListeners.lambda$environmentPrepared$2(SpringApplicationRunListeners.java:64)
-	at java.base/java.lang.Iterable.forEach(Iterable.java:75)
-	at org.springframework.boot.SpringApplicationRunListeners.doWithListeners(SpringApplicationRunListeners.java:118)
-	at org.springframework.boot.SpringApplicationRunListeners.doWithListeners(SpringApplicationRunListeners.java:112)
-	at org.springframework.boot.SpringApplicationRunListeners.environmentPrepared(SpringApplicationRunListeners.java:63)
-	at org.springframework.boot.SpringApplication.prepareEnvironment(SpringApplication.java:360)
-	at org.springframework.boot.SpringApplication.run(SpringApplication.java:311)
-	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1306)
-	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1295)
-	at com.sapiece.ProjectBackendApplication.main(ProjectBackendApplication.java:15)
-2024-01-13 08:53:22 [main] INFO  c.sapiece.ProjectBackendApplication - Starting ProjectBackendApplication using Java 21.0.1 with PID 2924 (D:\idea\GraduationDesign\project-backend\target\classes started by 周磊磊 in D:\idea\GraduationDesign)
-2024-01-13 08:53:22 [main] DEBUG c.sapiece.ProjectBackendApplication - Running with Spring Boot v3.1.5, Spring v6.0.13
-2024-01-13 08:53:22 [main] INFO  c.sapiece.ProjectBackendApplication - No active profile set, falling back to 1 default profile: "default"
-2024-01-13 08:53:25 [main] ERROR o.a.c.core.AprLifecycleListener - An incompatible version [1.2.31] of the Apache Tomcat Native library is installed, while Tomcat requires version [1.2.34]
-2024-01-13 08:53:26 [main] DEBUG c.sapiece.filter.JwtAuthorizeFilter - Filter 'jwtAuthorizeFilter' configured for use
-2024-01-13 08:53:28 [main] DEBUG o.s.w.s.m.m.a.RequestMappingHandlerMapping - 11 mappings in 'requestMappingHandlerMapping'
-2024-01-13 08:53:28 [main] DEBUG o.s.w.s.h.SimpleUrlHandlerMapping - Patterns [/webjars/**, /**, /swagger-ui*/*swagger-initializer.js, /swagger-ui*/**] in 'resourceHandlerMapping'
-2024-01-13 08:53:28 [main] DEBUG o.s.w.s.m.m.a.RequestMappingHandlerAdapter - ControllerAdvice beans: 0 @ModelAttribute, 0 @InitBinder, 1 RequestBodyAdvice, 1 ResponseBodyAdvice
-2024-01-13 08:53:28 [main] DEBUG o.s.w.s.m.m.a.ExceptionHandlerExceptionResolver - ControllerAdvice beans: 2 @ExceptionHandler, 1 ResponseBodyAdvice
-2024-01-13 08:53:29 [main] WARN  o.s.c.LocalVariableTableParameterNameDiscoverer - Using deprecated '-debug' fallback for parameter name resolution. Compile the affected code with '-parameters' instead or avoid its introspection: org.springframework.amqp.rabbit.core.RabbitAdmin
-2024-01-13 08:53:29 [main] INFO  c.sapiece.ProjectBackendApplication - Started ProjectBackendApplication in 7.939 seconds (process running for 11.494)
-2024-01-13 08:54:21 [http-nio-8080-exec-2] INFO  o.s.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
-2024-01-13 08:54:21 [http-nio-8080-exec-2] DEBUG o.s.web.servlet.DispatcherServlet - Detected StandardServletMultipartResolver
-2024-01-13 08:54:21 [http-nio-8080-exec-2] DEBUG o.s.web.servlet.DispatcherServlet - Detected AcceptHeaderLocaleResolver
-2024-01-13 08:54:21 [http-nio-8080-exec-2] DEBUG o.s.web.servlet.DispatcherServlet - Detected FixedThemeResolver
-2024-01-13 08:54:21 [http-nio-8080-exec-2] DEBUG o.s.web.servlet.DispatcherServlet - Detected org.springframework.web.servlet.view.DefaultRequestToViewNameTranslator@67dc5e60
-2024-01-13 08:54:21 [http-nio-8080-exec-2] DEBUG o.s.web.servlet.DispatcherServlet - Detected org.springframework.web.servlet.support.SessionFlashMapManager@430f28ce
-2024-01-13 08:54:21 [http-nio-8080-exec-2] DEBUG o.s.web.servlet.DispatcherServlet - enableLoggingRequestDetails='false': request parameters and headers will be masked to prevent unsafe logging of potentially sensitive data
-2024-01-13 08:54:21 [http-nio-8080-exec-2] INFO  o.s.web.servlet.DispatcherServlet - Completed initialization in 3 ms
-2024-01-13 08:54:30 [http-nio-8080-exec-1] DEBUG o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped to com.sapiece.question.controller.QuestionController#fetchQuestions()
-2024-01-13 08:54:30 [http-nio-8080-exec-3] DEBUG o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped to com.sapiece.question.controller.QuestionController#fetchQuestions()
-2024-01-13 08:54:30 [http-nio-8080-exec-3] DEBUG o.s.web.servlet.DispatcherServlet - GET "/api/question/fetch", parameters={}
-2024-01-13 08:54:30 [http-nio-8080-exec-3] DEBUG o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped to com.sapiece.question.controller.QuestionController#fetchQuestions()
-2024-01-13 08:54:30 [http-nio-8080-exec-3] DEBUG o.s.w.s.m.m.a.HttpEntityMethodProcessor - Using 'application/json', given [application/json, text/plain, */*] and supported [application/json, application/*+json]
-2024-01-13 08:54:30 [http-nio-8080-exec-3] DEBUG o.s.w.s.m.m.a.HttpEntityMethodProcessor - Writing [[Question(questionId=87, type=single_choice, content=下列哪种葡萄酒通常以干型和半干型最为著名？, options=A.雷司令,B.佳美,C.霞多丽 (truncated)...]
-2024-01-13 08:54:31 [http-nio-8080-exec-3] DEBUG o.s.web.servlet.DispatcherServlet - Completed 200 OK
-2024-01-13 08:54:41 [http-nio-8080-exec-4] DEBUG o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped to com.sapiece.question.controller.QuestionController#fetchQuestions()
-2024-01-13 08:54:41 [http-nio-8080-exec-5] DEBUG o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped to com.sapiece.question.controller.QuestionController#fetchQuestions()
-2024-01-13 08:54:41 [http-nio-8080-exec-5] DEBUG o.s.web.servlet.DispatcherServlet - GET "/api/question/fetch", parameters={}
-2024-01-13 08:54:41 [http-nio-8080-exec-5] DEBUG o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped to com.sapiece.question.controller.QuestionController#fetchQuestions()
-2024-01-13 08:54:41 [http-nio-8080-exec-5] DEBUG o.s.w.s.m.m.a.HttpEntityMethodProcessor - Using 'application/json', given [application/json, text/plain, */*] and supported [application/json, application/*+json]
-2024-01-13 08:54:41 [http-nio-8080-exec-5] DEBUG o.s.w.s.m.m.a.HttpEntityMethodProcessor - Writing [[Question(questionId=48, type=single_choice, content=波特酒是哪个国家的特产？, options=A.法国,B.西班牙,C.意大利,D.葡萄牙, a (truncated)...]
-2024-01-13 08:54:41 [http-nio-8080-exec-5] DEBUG o.s.web.servlet.DispatcherServlet - Completed 200 OK
-2024-01-13 08:55:30 [http-nio-8080-exec-7] DEBUG o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped to com.sapiece.question.controller.QuestionController#fetchQuestions()
-2024-01-13 08:55:30 [http-nio-8080-exec-8] DEBUG o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped to com.sapiece.question.controller.QuestionController#fetchQuestions()
-2024-01-13 08:55:30 [http-nio-8080-exec-8] DEBUG o.s.web.servlet.DispatcherServlet - GET "/api/question/fetch", parameters={}
-2024-01-13 08:55:30 [http-nio-8080-exec-8] DEBUG o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped to com.sapiece.question.controller.QuestionController#fetchQuestions()
-2024-01-13 08:55:30 [http-nio-8080-exec-8] DEBUG o.s.w.s.m.m.a.HttpEntityMethodProcessor - Using 'application/json', given [application/json, text/plain, */*] and supported [application/json, application/*+json]
-2024-01-13 08:55:30 [http-nio-8080-exec-8] DEBUG o.s.w.s.m.m.a.HttpEntityMethodProcessor - Writing [[Question(questionId=72, type=single_choice, content=通常情况下，下列哪种葡萄酒会在瓶中进行二次发酵？, options=A.香槟,B.马尔贝克,C (truncated)...]
-2024-01-13 08:55:30 [http-nio-8080-exec-8] DEBUG o.s.web.servlet.DispatcherServlet - Completed 200 OK
-2024-01-13 08:56:11 [http-nio-8080-exec-9] DEBUG o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped to com.sapiece.question.controller.QuestionController#fetchQuestions()
-2024-01-13 08:56:11 [http-nio-8080-exec-10] DEBUG o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped to com.sapiece.question.controller.QuestionController#fetchQuestions()
-2024-01-13 08:56:11 [http-nio-8080-exec-10] DEBUG o.s.web.servlet.DispatcherServlet - GET "/api/question/fetch", parameters={}
-2024-01-13 08:56:11 [http-nio-8080-exec-10] DEBUG o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped to com.sapiece.question.controller.QuestionController#fetchQuestions()
-2024-01-13 08:56:11 [http-nio-8080-exec-10] DEBUG o.s.w.s.m.m.a.HttpEntityMethodProcessor - Using 'application/json', given [application/json, text/plain, */*] and supported [application/json, application/*+json]
-2024-01-13 08:56:11 [http-nio-8080-exec-10] DEBUG o.s.w.s.m.m.a.HttpEntityMethodProcessor - Writing [[Question(questionId=87, type=single_choice, content=下列哪种葡萄酒通常以干型和半干型最为著名？, options=A.佳美,B.赤霞珠,C.雷司令 (truncated)...]
-2024-01-13 08:56:11 [http-nio-8080-exec-10] DEBUG o.s.web.servlet.DispatcherServlet - Completed 200 OK
-2024-01-13 08:57:18 [http-nio-8080-exec-1] DEBUG o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped to com.sapiece.question.controller.QuestionController#fetchQuestions()
-2024-01-13 08:57:18 [http-nio-8080-exec-3] DEBUG o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped to com.sapiece.question.controller.QuestionController#fetchQuestions()
-2024-01-13 08:57:18 [http-nio-8080-exec-3] DEBUG o.s.web.servlet.DispatcherServlet - GET "/api/question/fetch", parameters={}
-2024-01-13 08:57:18 [http-nio-8080-exec-3] DEBUG o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped to com.sapiece.question.controller.QuestionController#fetchQuestions()
-2024-01-13 08:57:18 [http-nio-8080-exec-3] DEBUG o.s.w.s.m.m.a.HttpEntityMethodProcessor - Using 'application/json', given [application/json, text/plain, */*] and supported [application/json, application/*+json]
-2024-01-13 08:57:18 [http-nio-8080-exec-3] DEBUG o.s.w.s.m.m.a.HttpEntityMethodProcessor - Writing [[Question(questionId=87, type=single_choice, content=下列哪种葡萄酒通常以干型和半干型最为著名？, options=A.霞多丽,B.雷司令,C.佳美 (truncated)...]
-2024-01-13 08:57:18 [http-nio-8080-exec-3] DEBUG o.s.web.servlet.DispatcherServlet - Completed 200 OK
-2024-01-13 08:58:05 [http-nio-8080-exec-4] DEBUG o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped to com.sapiece.question.controller.QuestionController#fetchQuestions()
-2024-01-13 08:58:05 [http-nio-8080-exec-5] DEBUG o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped to com.sapiece.question.controller.QuestionController#fetchQuestions()
-2024-01-13 08:58:05 [http-nio-8080-exec-5] DEBUG o.s.web.servlet.DispatcherServlet - GET "/api/question/fetch", parameters={}
-2024-01-13 08:58:05 [http-nio-8080-exec-5] DEBUG o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped to com.sapiece.question.controller.QuestionController#fetchQuestions()
-2024-01-13 08:58:05 [http-nio-8080-exec-5] DEBUG o.s.w.s.m.m.a.HttpEntityMethodProcessor - Using 'application/json', given [application/json, text/plain, */*] and supported [application/json, application/*+json]
-2024-01-13 08:58:05 [http-nio-8080-exec-5] DEBUG o.s.w.s.m.m.a.HttpEntityMethodProcessor - Writing [[Question(questionId=71, type=single_choice, content=在葡萄酒品鉴中，用于描述葡萄酒酸度和果味之间平衡的术语是什么？, options=A.酒体,B (truncated)...]
-2024-01-13 08:58:05 [http-nio-8080-exec-5] DEBUG o.s.web.servlet.DispatcherServlet - Completed 200 OK
-2024-01-13 08:58:16 [http-nio-8080-exec-6] DEBUG o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped to com.sapiece.question.controller.QuestionController#fetchQuestions()
-2024-01-13 08:58:16 [http-nio-8080-exec-7] DEBUG o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped to com.sapiece.question.controller.QuestionController#fetchQuestions()
-2024-01-13 08:58:16 [http-nio-8080-exec-7] DEBUG o.s.web.servlet.DispatcherServlet - GET "/api/question/fetch", parameters={}
-2024-01-13 08:58:16 [http-nio-8080-exec-7] DEBUG o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped to com.sapiece.question.controller.QuestionController#fetchQuestions()
-2024-01-13 08:58:16 [http-nio-8080-exec-7] DEBUG o.s.w.s.m.m.a.HttpEntityMethodProcessor - Using 'application/json', given [application/json, text/plain, */*] and supported [application/json, application/*+json]
-2024-01-13 08:58:16 [http-nio-8080-exec-7] DEBUG o.s.w.s.m.m.a.HttpEntityMethodProcessor - Writing [[Question(questionId=79, type=single_choice, content=下列哪种葡萄酒通常以干型和半干型最为著名？, options=A.佳美,B.赤霞珠,C.霞多丽 (truncated)...]
-2024-01-13 08:58:16 [http-nio-8080-exec-7] DEBUG o.s.web.servlet.DispatcherServlet - Completed 200 OK
-2024-01-13 08:59:19 [http-nio-8080-exec-9] DEBUG o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped to com.sapiece.question.controller.QuestionController#fetchQuestions()
-2024-01-13 08:59:19 [http-nio-8080-exec-10] DEBUG o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped to com.sapiece.question.controller.QuestionController#fetchQuestions()
-2024-01-13 08:59:19 [http-nio-8080-exec-10] DEBUG o.s.web.servlet.DispatcherServlet - GET "/api/question/fetch", parameters={}
-2024-01-13 08:59:19 [http-nio-8080-exec-10] DEBUG o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped to com.sapiece.question.controller.QuestionController#fetchQuestions()
-2024-01-13 08:59:19 [http-nio-8080-exec-10] DEBUG o.s.w.s.m.m.a.HttpEntityMethodProcessor - Using 'application/json', given [application/json, text/plain, */*] and supported [application/json, application/*+json]
-2024-01-13 08:59:19 [http-nio-8080-exec-10] DEBUG o.s.w.s.m.m.a.HttpEntityMethodProcessor - Writing [[Question(questionId=79, type=single_choice, content=下列哪种葡萄酒通常以干型和半干型最为著名？, options=A.赤霞珠,B.佳美,C.雷司令 (truncated)...]
-2024-01-13 08:59:19 [http-nio-8080-exec-10] DEBUG o.s.web.servlet.DispatcherServlet - Completed 200 OK
+2024-01-20 16:05:53 [http-nio-8080-exec-4] WARN  o.m.s.mapper.ClassPathMapperScanner - No MyBatis mapper was found in '[com.sapiece.user.mapper, com.sapiece.question.mapper]' package. Please check your configuration.
+2024-01-20 16:05:54 [http-nio-8080-exec-4] DEBUG o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped to com.sapiece.question.controller.QuestionController#fetchQuestions()
+2024-01-20 16:05:54 [http-nio-8080-exec-5] DEBUG o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped to com.sapiece.question.controller.QuestionController#fetchQuestions()
+2024-01-20 16:05:54 [http-nio-8080-exec-5] DEBUG o.s.web.servlet.DispatcherServlet - Detected StandardServletMultipartResolver
+2024-01-20 16:05:54 [http-nio-8080-exec-5] DEBUG o.s.web.servlet.DispatcherServlet - Detected AcceptHeaderLocaleResolver
+2024-01-20 16:05:54 [http-nio-8080-exec-5] DEBUG o.s.web.servlet.DispatcherServlet - Detected FixedThemeResolver
+2024-01-20 16:05:54 [http-nio-8080-exec-5] DEBUG o.s.web.servlet.DispatcherServlet - Detected org.springframework.web.servlet.view.DefaultRequestToViewNameTranslator@2e3b9ede
+2024-01-20 16:05:54 [http-nio-8080-exec-5] DEBUG o.s.web.servlet.DispatcherServlet - Detected org.springframework.web.servlet.support.SessionFlashMapManager@100b8d95
+2024-01-20 16:05:54 [http-nio-8080-exec-5] DEBUG o.s.web.servlet.DispatcherServlet - GET "/api/question/fetch", parameters={}
+2024-01-20 16:05:54 [http-nio-8080-exec-5] DEBUG o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped to com.sapiece.question.controller.QuestionController#fetchQuestions()
+2024-01-20 16:05:54 [http-nio-8080-exec-5] DEBUG o.s.w.s.m.m.a.HttpEntityMethodProcessor - Using 'application/json', given [application/json, text/plain, */*] and supported [application/json, application/*+json]
+2024-01-20 16:05:54 [http-nio-8080-exec-5] DEBUG o.s.w.s.m.m.a.HttpEntityMethodProcessor - Writing [[Question(questionId=1, type=single_choice, content=波特酒主要生产于哪个国家？, options=A.葡萄牙,B.法国,C.西班牙,D.意大利, a (truncated)...]
+2024-01-20 16:05:54 [http-nio-8080-exec-5] DEBUG o.s.web.servlet.DispatcherServlet - Completed 200 OK
+2024-01-20 16:09:25 [http-nio-8080-exec-7] DEBUG o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped to com.sapiece.question.controller.QuestionController#fetchQuestions()
+2024-01-20 16:09:25 [http-nio-8080-exec-8] DEBUG o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped to com.sapiece.question.controller.QuestionController#fetchQuestions()
+2024-01-20 16:09:25 [http-nio-8080-exec-8] DEBUG o.s.web.servlet.DispatcherServlet - GET "/api/question/fetch", parameters={}
+2024-01-20 16:09:25 [http-nio-8080-exec-8] DEBUG o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped to com.sapiece.question.controller.QuestionController#fetchQuestions()
+2024-01-20 16:09:25 [http-nio-8080-exec-8] DEBUG o.s.w.s.m.m.a.HttpEntityMethodProcessor - Using 'application/json', given [application/json, text/plain, */*] and supported [application/json, application/*+json]
+2024-01-20 16:09:25 [http-nio-8080-exec-8] DEBUG o.s.w.s.m.m.a.HttpEntityMethodProcessor - Writing [[Question(questionId=48, type=single_choice, content=波特酒是哪个国家的特产？, options=A.法国,B.葡萄牙,C.意大利,D.西班牙, a (truncated)...]
+2024-01-20 16:09:25 [http-nio-8080-exec-8] DEBUG o.s.web.servlet.DispatcherServlet - Completed 200 OK
+2024-01-20 16:09:50 [http-nio-8080-exec-9] DEBUG o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped to com.sapiece.question.controller.QuestionController#fetchQuestions()
+2024-01-20 16:09:50 [http-nio-8080-exec-10] DEBUG o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped to com.sapiece.question.controller.QuestionController#fetchQuestions()
+2024-01-20 16:09:50 [http-nio-8080-exec-10] DEBUG o.s.web.servlet.DispatcherServlet - GET "/api/question/fetch", parameters={}
+2024-01-20 16:09:50 [http-nio-8080-exec-10] DEBUG o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped to com.sapiece.question.controller.QuestionController#fetchQuestions()
+2024-01-20 16:09:50 [http-nio-8080-exec-10] DEBUG o.s.w.s.m.m.a.HttpEntityMethodProcessor - Using 'application/json', given [application/json, text/plain, */*] and supported [application/json, application/*+json]
+2024-01-20 16:09:50 [http-nio-8080-exec-10] DEBUG o.s.w.s.m.m.a.HttpEntityMethodProcessor - Writing [[Question(questionId=22, type=single_choice, content=下列哪种葡萄酒通常是用黑皮诺（Pinot Noir）葡萄酿造的？, options=A.红葡萄 (truncated)...]
+2024-01-20 16:09:50 [http-nio-8080-exec-10] DEBUG o.s.web.servlet.DispatcherServlet - Completed 200 OK
+2024-01-20 16:12:22 [http-nio-8080-exec-1] DEBUG o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped to com.sapiece.question.controller.QuestionController#fetchQuestions()
+2024-01-20 16:12:22 [http-nio-8080-exec-3] DEBUG o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped to com.sapiece.question.controller.QuestionController#fetchQuestions()
+2024-01-20 16:12:22 [http-nio-8080-exec-3] DEBUG o.s.web.servlet.DispatcherServlet - GET "/api/question/fetch", parameters={}
+2024-01-20 16:12:22 [http-nio-8080-exec-3] DEBUG o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped to com.sapiece.question.controller.QuestionController#fetchQuestions()
+2024-01-20 16:12:22 [http-nio-8080-exec-3] DEBUG o.s.w.s.m.m.a.HttpEntityMethodProcessor - Using 'application/json', given [application/json, text/plain, */*] and supported [application/json, application/*+json]
+2024-01-20 16:12:22 [http-nio-8080-exec-3] DEBUG o.s.w.s.m.m.a.HttpEntityMethodProcessor - Writing [[Question(questionId=88, type=single_choice, content=白兰地是通过蒸馏哪种饮料制成的？, options=A.葡萄酒,B.米酒,C.啤酒,D.苹果汁 (truncated)...]
+2024-01-20 16:12:22 [http-nio-8080-exec-3] DEBUG o.s.web.servlet.DispatcherServlet - Completed 200 OK
+2024-01-20 16:17:59 [main] DEBUG o.s.b.t.c.SpringBootTestContextBootstrapper - Neither @ContextConfiguration nor @ContextHierarchy found for test class [ProjectBackendApplicationTests]: using SpringBootContextLoader
+2024-01-20 16:17:59 [main] DEBUG o.s.t.c.s.AbstractContextLoader - Could not detect default resource locations for test class [com.sapiece.ProjectBackendApplicationTests]: no resource found for suffixes {-context.xml, Context.groovy}.
+2024-01-20 16:17:59 [main] INFO  o.s.t.c.s.AnnotationConfigContextLoaderUtils - Could not detect default configuration classes for test class [com.sapiece.ProjectBackendApplicationTests]: ProjectBackendApplicationTests does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
+2024-01-20 16:17:59 [main] DEBUG o.s.b.t.c.SpringBootTestContextBootstrapper - Using ContextCustomizers for test class [ProjectBackendApplicationTests]: [ExcludeFilterContextCustomizer, DuplicateJsonObjectContextCustomizer, MockitoContextCustomizer, TestRestTemplateContextCustomizer, DisableObservabilityContextCustomizer, PropertyMappingContextCustomizer, WebDriverContextCustomizer]
+2024-01-20 16:17:59 [main] DEBUG o.s.c.a.ClassPathScanningCandidateComponentProvider - Identified candidate component class: file [D:\idea\GraduationDesign\project-backend\target\classes\com\sapiece\ProjectBackendApplication.class]
+2024-01-20 16:17:59 [main] INFO  o.s.b.t.c.SpringBootTestContextBootstrapper - Found @SpringBootConfiguration com.sapiece.ProjectBackendApplication for test class com.sapiece.ProjectBackendApplicationTests
+2024-01-20 16:17:59 [main] DEBUG o.s.t.c.u.TestContextSpringFactoriesUtils - Skipping candidate TestExecutionListener [org.springframework.test.context.observation.MicrometerObservationRegistryTestExecutionListener] due to a missing dependency. Specify custom TestExecutionListener classes or make the default TestExecutionListener classes and their required dependencies available. Offending class: io.micrometer.context.ThreadLocalAccessor. MicrometerObservationRegistryTestExecutionListener requires io.micrometer:micrometer-observation:1.10.8 or higher and io.micrometer:context-propagation:1.0.3 or higher.
+2024-01-20 16:17:59 [main] DEBUG o.s.b.t.c.SpringBootTestContextBootstrapper - Using TestExecutionListeners for test class [ProjectBackendApplicationTests]: [ServletTestExecutionListener, DirtiesContextBeforeModesTestExecutionListener, ApplicationEventsTestExecutionListener, MockitoTestExecutionListener, DependencyInjectionTestExecutionListener, DirtiesContextTestExecutionListener, TransactionalTestExecutionListener, SqlScriptsTestExecutionListener, EventPublishingTestExecutionListener, WithSecurityContextTestExecutionListener, ReactorContextTestExecutionListener, ResetMocksTestExecutionListener, RestDocsTestExecutionListener, MockRestServiceServerResetTestExecutionListener, MockMvcPrintOnlyOnFailureTestExecutionListener, WebDriverTestExecutionListener, MockWebServiceServerTestExecutionListener]
+2024-01-20 16:17:59 [main] DEBUG o.s.t.c.s.DirtiesContextBeforeModesTestExecutionListener - Before test class: class [ProjectBackendApplicationTests], class annotated with @DirtiesContext [false] with mode [null]
+2024-01-20 16:18:00 [main] INFO  c.s.ProjectBackendApplicationTests - Starting ProjectBackendApplicationTests using Java 21.0.1 with PID 6336 (started by 周磊磊 in D:\idea\GraduationDesign\project-backend)
+2024-01-20 16:18:00 [main] DEBUG c.s.ProjectBackendApplicationTests - Running with Spring Boot v3.1.5, Spring v6.0.13
+2024-01-20 16:18:00 [main] INFO  c.s.ProjectBackendApplicationTests - No active profile set, falling back to 1 default profile: "default"
+2024-01-20 16:18:00 [main] DEBUG o.s.w.c.s.GenericWebApplicationContext - Refreshing org.springframework.web.context.support.GenericWebApplicationContext@69c6161d
+2024-01-20 16:18:05 [main] ERROR o.a.c.core.AprLifecycleListener - An incompatible version [1.2.31] of the Apache Tomcat Native library is installed, while Tomcat requires version [1.2.34]
+2024-01-20 16:18:06 [main] DEBUG o.s.w.s.m.m.a.RequestMappingHandlerAdapter - ControllerAdvice beans: 0 @ModelAttribute, 0 @InitBinder, 1 RequestBodyAdvice, 1 ResponseBodyAdvice
+2024-01-20 16:18:06 [main] DEBUG o.s.w.s.m.m.a.RequestMappingHandlerMapping - 13 mappings in 'requestMappingHandlerMapping'
+2024-01-20 16:18:06 [main] DEBUG o.s.w.s.h.SimpleUrlHandlerMapping - Patterns [/webjars/**, /**, /swagger-ui*/*swagger-initializer.js, /swagger-ui*/**] in 'resourceHandlerMapping'
+2024-01-20 16:18:06 [main] DEBUG o.s.w.s.m.m.a.ExceptionHandlerExceptionResolver - ControllerAdvice beans: 2 @ExceptionHandler, 1 ResponseBodyAdvice
+2024-01-20 16:18:07 [main] INFO  c.s.ProjectBackendApplicationTests - Started ProjectBackendApplicationTests in 8.232 seconds (process running for 10.045)
+2024-01-20 16:18:09 [SpringApplicationShutdownHook] DEBUG o.s.w.c.s.GenericWebApplicationContext - Closing org.springframework.web.context.support.GenericWebApplicationContext@69c6161d, started on Sat Jan 20 16:18:00 CST 2024
+2024-01-20 16:18:47 [main] DEBUG o.s.b.t.c.SpringBootTestContextBootstrapper - Neither @ContextConfiguration nor @ContextHierarchy found for test class [ProjectBackendApplicationTests]: using SpringBootContextLoader
+2024-01-20 16:18:47 [main] DEBUG o.s.t.c.s.AbstractContextLoader - Could not detect default resource locations for test class [com.sapiece.ProjectBackendApplicationTests]: no resource found for suffixes {-context.xml, Context.groovy}.
+2024-01-20 16:18:47 [main] INFO  o.s.t.c.s.AnnotationConfigContextLoaderUtils - Could not detect default configuration classes for test class [com.sapiece.ProjectBackendApplicationTests]: ProjectBackendApplicationTests does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
+2024-01-20 16:18:47 [main] DEBUG o.s.b.t.c.SpringBootTestContextBootstrapper - Using ContextCustomizers for test class [ProjectBackendApplicationTests]: [ExcludeFilterContextCustomizer, DuplicateJsonObjectContextCustomizer, MockitoContextCustomizer, TestRestTemplateContextCustomizer, DisableObservabilityContextCustomizer, PropertyMappingContextCustomizer, WebDriverContextCustomizer]
+2024-01-20 16:18:47 [main] DEBUG o.s.c.a.ClassPathScanningCandidateComponentProvider - Identified candidate component class: file [D:\idea\GraduationDesign\project-backend\target\classes\com\sapiece\ProjectBackendApplication.class]
+2024-01-20 16:18:47 [main] INFO  o.s.b.t.c.SpringBootTestContextBootstrapper - Found @SpringBootConfiguration com.sapiece.ProjectBackendApplication for test class com.sapiece.ProjectBackendApplicationTests
+2024-01-20 16:18:47 [main] DEBUG o.s.t.c.u.TestContextSpringFactoriesUtils - Skipping candidate TestExecutionListener [org.springframework.test.context.observation.MicrometerObservationRegistryTestExecutionListener] due to a missing dependency. Specify custom TestExecutionListener classes or make the default TestExecutionListener classes and their required dependencies available. Offending class: io.micrometer.context.ThreadLocalAccessor. MicrometerObservationRegistryTestExecutionListener requires io.micrometer:micrometer-observation:1.10.8 or higher and io.micrometer:context-propagation:1.0.3 or higher.
+2024-01-20 16:18:47 [main] DEBUG o.s.b.t.c.SpringBootTestContextBootstrapper - Using TestExecutionListeners for test class [ProjectBackendApplicationTests]: [ServletTestExecutionListener, DirtiesContextBeforeModesTestExecutionListener, ApplicationEventsTestExecutionListener, MockitoTestExecutionListener, DependencyInjectionTestExecutionListener, DirtiesContextTestExecutionListener, TransactionalTestExecutionListener, SqlScriptsTestExecutionListener, EventPublishingTestExecutionListener, WithSecurityContextTestExecutionListener, ReactorContextTestExecutionListener, ResetMocksTestExecutionListener, RestDocsTestExecutionListener, MockRestServiceServerResetTestExecutionListener, MockMvcPrintOnlyOnFailureTestExecutionListener, WebDriverTestExecutionListener, MockWebServiceServerTestExecutionListener]
+2024-01-20 16:18:47 [main] DEBUG o.s.t.c.s.DirtiesContextBeforeModesTestExecutionListener - Before test class: class [ProjectBackendApplicationTests], class annotated with @DirtiesContext [false] with mode [null]
+2024-01-20 16:18:48 [main] INFO  c.s.ProjectBackendApplicationTests - Starting ProjectBackendApplicationTests using Java 21.0.1 with PID 29392 (started by 周磊磊 in D:\idea\GraduationDesign\project-backend)
+2024-01-20 16:18:48 [main] DEBUG c.s.ProjectBackendApplicationTests - Running with Spring Boot v3.1.5, Spring v6.0.13
+2024-01-20 16:18:48 [main] INFO  c.s.ProjectBackendApplicationTests - No active profile set, falling back to 1 default profile: "default"
+2024-01-20 16:18:48 [main] DEBUG o.s.w.c.s.GenericWebApplicationContext - Refreshing org.springframework.web.context.support.GenericWebApplicationContext@7ed9ae94
+2024-01-20 16:18:53 [main] ERROR o.a.c.core.AprLifecycleListener - An incompatible version [1.2.31] of the Apache Tomcat Native library is installed, while Tomcat requires version [1.2.34]
+2024-01-20 16:18:54 [main] DEBUG o.s.w.s.m.m.a.RequestMappingHandlerAdapter - ControllerAdvice beans: 0 @ModelAttribute, 0 @InitBinder, 1 RequestBodyAdvice, 1 ResponseBodyAdvice
+2024-01-20 16:18:54 [main] DEBUG o.s.w.s.m.m.a.RequestMappingHandlerMapping - 13 mappings in 'requestMappingHandlerMapping'
+2024-01-20 16:18:54 [main] DEBUG o.s.w.s.h.SimpleUrlHandlerMapping - Patterns [/webjars/**, /**, /swagger-ui*/*swagger-initializer.js, /swagger-ui*/**] in 'resourceHandlerMapping'
+2024-01-20 16:18:54 [main] DEBUG o.s.w.s.m.m.a.ExceptionHandlerExceptionResolver - ControllerAdvice beans: 2 @ExceptionHandler, 1 ResponseBodyAdvice
+2024-01-20 16:18:55 [main] INFO  c.s.ProjectBackendApplicationTests - Started ProjectBackendApplicationTests in 8.252 seconds (process running for 9.94)
+2024-01-20 16:18:56 [SpringApplicationShutdownHook] DEBUG o.s.w.c.s.GenericWebApplicationContext - Closing org.springframework.web.context.support.GenericWebApplicationContext@7ed9ae94, started on Sat Jan 20 16:18:48 CST 2024
+2024-01-20 16:19:32 [main] DEBUG o.s.b.t.c.SpringBootTestContextBootstrapper - Neither @ContextConfiguration nor @ContextHierarchy found for test class [ProjectBackendApplicationTests]: using SpringBootContextLoader
+2024-01-20 16:19:32 [main] DEBUG o.s.t.c.s.AbstractContextLoader - Could not detect default resource locations for test class [com.sapiece.ProjectBackendApplicationTests]: no resource found for suffixes {-context.xml, Context.groovy}.
+2024-01-20 16:19:32 [main] INFO  o.s.t.c.s.AnnotationConfigContextLoaderUtils - Could not detect default configuration classes for test class [com.sapiece.ProjectBackendApplicationTests]: ProjectBackendApplicationTests does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
+2024-01-20 16:19:32 [main] DEBUG o.s.b.t.c.SpringBootTestContextBootstrapper - Using ContextCustomizers for test class [ProjectBackendApplicationTests]: [ExcludeFilterContextCustomizer, DuplicateJsonObjectContextCustomizer, MockitoContextCustomizer, TestRestTemplateContextCustomizer, DisableObservabilityContextCustomizer, PropertyMappingContextCustomizer, WebDriverContextCustomizer]
+2024-01-20 16:19:33 [main] DEBUG o.s.c.a.ClassPathScanningCandidateComponentProvider - Identified candidate component class: file [D:\idea\GraduationDesign\project-backend\target\classes\com\sapiece\ProjectBackendApplication.class]
+2024-01-20 16:19:33 [main] INFO  o.s.b.t.c.SpringBootTestContextBootstrapper - Found @SpringBootConfiguration com.sapiece.ProjectBackendApplication for test class com.sapiece.ProjectBackendApplicationTests
+2024-01-20 16:19:33 [main] DEBUG o.s.t.c.u.TestContextSpringFactoriesUtils - Skipping candidate TestExecutionListener [org.springframework.test.context.observation.MicrometerObservationRegistryTestExecutionListener] due to a missing dependency. Specify custom TestExecutionListener classes or make the default TestExecutionListener classes and their required dependencies available. Offending class: io.micrometer.context.ThreadLocalAccessor. MicrometerObservationRegistryTestExecutionListener requires io.micrometer:micrometer-observation:1.10.8 or higher and io.micrometer:context-propagation:1.0.3 or higher.
+2024-01-20 16:19:33 [main] DEBUG o.s.b.t.c.SpringBootTestContextBootstrapper - Using TestExecutionListeners for test class [ProjectBackendApplicationTests]: [ServletTestExecutionListener, DirtiesContextBeforeModesTestExecutionListener, ApplicationEventsTestExecutionListener, MockitoTestExecutionListener, DependencyInjectionTestExecutionListener, DirtiesContextTestExecutionListener, TransactionalTestExecutionListener, SqlScriptsTestExecutionListener, EventPublishingTestExecutionListener, WithSecurityContextTestExecutionListener, ReactorContextTestExecutionListener, ResetMocksTestExecutionListener, RestDocsTestExecutionListener, MockRestServiceServerResetTestExecutionListener, MockMvcPrintOnlyOnFailureTestExecutionListener, WebDriverTestExecutionListener, MockWebServiceServerTestExecutionListener]
+2024-01-20 16:19:33 [main] DEBUG o.s.t.c.s.DirtiesContextBeforeModesTestExecutionListener - Before test class: class [ProjectBackendApplicationTests], class annotated with @DirtiesContext [false] with mode [null]
+2024-01-20 16:19:33 [main] INFO  c.s.ProjectBackendApplicationTests - Starting ProjectBackendApplicationTests using Java 21.0.1 with PID 27488 (started by 周磊磊 in D:\idea\GraduationDesign\project-backend)
+2024-01-20 16:19:33 [main] DEBUG c.s.ProjectBackendApplicationTests - Running with Spring Boot v3.1.5, Spring v6.0.13
+2024-01-20 16:19:33 [main] INFO  c.s.ProjectBackendApplicationTests - No active profile set, falling back to 1 default profile: "default"
+2024-01-20 16:19:33 [main] DEBUG o.s.w.c.s.GenericWebApplicationContext - Refreshing org.springframework.web.context.support.GenericWebApplicationContext@41e1455d
+2024-01-20 16:19:39 [main] ERROR o.a.c.core.AprLifecycleListener - An incompatible version [1.2.31] of the Apache Tomcat Native library is installed, while Tomcat requires version [1.2.34]
+2024-01-20 16:19:39 [main] DEBUG o.s.w.s.m.m.a.RequestMappingHandlerAdapter - ControllerAdvice beans: 0 @ModelAttribute, 0 @InitBinder, 1 RequestBodyAdvice, 1 ResponseBodyAdvice
+2024-01-20 16:19:39 [main] DEBUG o.s.w.s.m.m.a.RequestMappingHandlerMapping - 13 mappings in 'requestMappingHandlerMapping'
+2024-01-20 16:19:40 [main] DEBUG o.s.w.s.h.SimpleUrlHandlerMapping - Patterns [/webjars/**, /**, /swagger-ui*/*swagger-initializer.js, /swagger-ui*/**] in 'resourceHandlerMapping'
+2024-01-20 16:19:40 [main] DEBUG o.s.w.s.m.m.a.ExceptionHandlerExceptionResolver - ControllerAdvice beans: 2 @ExceptionHandler, 1 ResponseBodyAdvice
+2024-01-20 16:19:41 [main] INFO  c.s.ProjectBackendApplicationTests - Started ProjectBackendApplicationTests in 8.042 seconds (process running for 9.742)
+2024-01-20 16:19:42 [SpringApplicationShutdownHook] DEBUG o.s.w.c.s.GenericWebApplicationContext - Closing org.springframework.web.context.support.GenericWebApplicationContext@41e1455d, started on Sat Jan 20 16:19:33 CST 2024
+2024-01-20 16:25:01 [http-nio-8080-exec-5] WARN  o.m.s.mapper.ClassPathMapperScanner - No MyBatis mapper was found in '[com.sapiece.user.mapper, com.sapiece.question.mapper]' package. Please check your configuration.
+2024-01-20 16:25:01 [http-nio-8080-exec-5] DEBUG o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped to com.sapiece.question.controller.QuestionController#fetchQuestions()
+2024-01-20 16:25:02 [http-nio-8080-exec-6] DEBUG o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped to com.sapiece.question.controller.QuestionController#fetchQuestions()
+2024-01-20 16:25:02 [http-nio-8080-exec-6] DEBUG o.s.web.servlet.DispatcherServlet - Detected StandardServletMultipartResolver
+2024-01-20 16:25:02 [http-nio-8080-exec-6] DEBUG o.s.web.servlet.DispatcherServlet - Detected AcceptHeaderLocaleResolver
+2024-01-20 16:25:02 [http-nio-8080-exec-6] DEBUG o.s.web.servlet.DispatcherServlet - Detected FixedThemeResolver
+2024-01-20 16:25:02 [http-nio-8080-exec-6] DEBUG o.s.web.servlet.DispatcherServlet - Detected org.springframework.web.servlet.view.DefaultRequestToViewNameTranslator@2e3b9ede
+2024-01-20 16:25:02 [http-nio-8080-exec-6] DEBUG o.s.web.servlet.DispatcherServlet - Detected org.springframework.web.servlet.support.SessionFlashMapManager@100b8d95
+2024-01-20 16:25:02 [http-nio-8080-exec-6] DEBUG o.s.web.servlet.DispatcherServlet - GET "/api/question/fetch", parameters={}
+2024-01-20 16:25:02 [http-nio-8080-exec-6] DEBUG o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped to com.sapiece.question.controller.QuestionController#fetchQuestions()
+2024-01-20 16:25:02 [http-nio-8080-exec-6] DEBUG o.s.w.s.m.m.a.HttpEntityMethodProcessor - Using 'application/json', given [application/json, text/plain, */*] and supported [application/json, application/*+json]
+2024-01-20 16:25:02 [http-nio-8080-exec-6] DEBUG o.s.w.s.m.m.a.HttpEntityMethodProcessor - Writing [[Question(questionId=40, type=single_choice, content=通常情况下，香槟酒是由哪些葡萄品种混合酿造的？, options=A.皮诺·格里吉奥和霞多丽, (truncated)...]
+2024-01-20 16:25:02 [http-nio-8080-exec-6] DEBUG o.s.web.servlet.DispatcherServlet - Completed 200 OK
+2024-01-20 16:25:22 [http-nio-8080-exec-7] DEBUG o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped to com.sapiece.question.controller.ExamResultController#loadUserTestData()
+2024-01-20 16:25:22 [http-nio-8080-exec-8] DEBUG o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped to com.sapiece.question.controller.ExamResultController#loadUserTestData()
+2024-01-20 16:25:22 [http-nio-8080-exec-8] DEBUG o.s.web.servlet.DispatcherServlet - GET "/api/test-data/user-test-data", parameters={}
+2024-01-20 16:25:22 [http-nio-8080-exec-8] DEBUG o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped to com.sapiece.question.controller.ExamResultController#loadUserTestData()
+2024-01-20 16:25:22 [http-nio-8080-exec-8] DEBUG o.s.w.s.m.m.a.HttpEntityMethodProcessor - Using 'application/json', given [application/json, text/plain, */*] and supported [application/json, application/*+json]
+2024-01-20 16:25:22 [http-nio-8080-exec-8] DEBUG o.s.w.s.m.m.a.HttpEntityMethodProcessor - Writing [[ExamResult(resultId=42, examId=1, userId=13, name=wangwu, userAnswers=id:88@白兰地是通过蒸馏哪种饮料制成的？@answer (truncated)...]
+2024-01-20 16:25:22 [http-nio-8080-exec-8] DEBUG o.s.web.servlet.DispatcherServlet - Completed 200 OK
+2024-01-20 16:26:53 [http-nio-8080-exec-10] DEBUG o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped to com.sapiece.question.controller.ExamResultController#loadUserTestData()
+2024-01-20 16:26:53 [http-nio-8080-exec-2] DEBUG o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped to com.sapiece.question.controller.ExamResultController#loadUserTestData()
+2024-01-20 16:26:53 [http-nio-8080-exec-2] DEBUG o.s.web.servlet.DispatcherServlet - GET "/api/test-data/user-test-data", parameters={}
+2024-01-20 16:26:53 [http-nio-8080-exec-2] DEBUG o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped to com.sapiece.question.controller.ExamResultController#loadUserTestData()
+2024-01-20 16:26:53 [http-nio-8080-exec-2] DEBUG o.s.w.s.m.m.a.HttpEntityMethodProcessor - Using 'application/json', given [application/json, text/plain, */*] and supported [application/json, application/*+json]
+2024-01-20 16:26:53 [http-nio-8080-exec-2] DEBUG o.s.w.s.m.m.a.HttpEntityMethodProcessor - Writing [[ExamResult(resultId=42, examId=1, userId=13, name=wangwu, userAnswers=id:88@白兰地是通过蒸馏哪种饮料制成的？@answer (truncated)...]
+2024-01-20 16:26:53 [http-nio-8080-exec-2] DEBUG o.s.web.servlet.DispatcherServlet - Completed 200 OK
+2024-01-20 16:26:56 [http-nio-8080-exec-1] DEBUG o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped to com.sapiece.question.controller.QuestionController#fetchQuestions()
+2024-01-20 16:26:56 [http-nio-8080-exec-3] DEBUG o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped to com.sapiece.question.controller.ExamResultController#loadUserTestData()
+2024-01-20 16:26:56 [http-nio-8080-exec-3] DEBUG o.s.web.servlet.DispatcherServlet - GET "/api/test-data/user-test-data", parameters={}
+2024-01-20 16:26:56 [http-nio-8080-exec-3] DEBUG o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped to com.sapiece.question.controller.ExamResultController#loadUserTestData()
+2024-01-20 16:26:56 [http-nio-8080-exec-4] DEBUG o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped to com.sapiece.question.controller.QuestionController#fetchQuestions()
+2024-01-20 16:26:56 [http-nio-8080-exec-4] DEBUG o.s.web.servlet.DispatcherServlet - GET "/api/question/fetch", parameters={}
+2024-01-20 16:26:56 [http-nio-8080-exec-4] DEBUG o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped to com.sapiece.question.controller.QuestionController#fetchQuestions()
+2024-01-20 16:26:56 [http-nio-8080-exec-3] DEBUG o.s.w.s.m.m.a.HttpEntityMethodProcessor - Using 'application/json', given [application/json, text/plain, */*] and supported [application/json, application/*+json]
+2024-01-20 16:26:56 [http-nio-8080-exec-3] DEBUG o.s.w.s.m.m.a.HttpEntityMethodProcessor - Writing [[ExamResult(resultId=42, examId=1, userId=13, name=wangwu, userAnswers=id:88@白兰地是通过蒸馏哪种饮料制成的？@answer (truncated)...]
+2024-01-20 16:26:56 [http-nio-8080-exec-3] DEBUG o.s.web.servlet.DispatcherServlet - Completed 200 OK
+2024-01-20 16:26:56 [http-nio-8080-exec-4] DEBUG o.s.w.s.m.m.a.HttpEntityMethodProcessor - Using 'application/json', given [application/json, text/plain, */*] and supported [application/json, application/*+json]
+2024-01-20 16:26:56 [http-nio-8080-exec-4] DEBUG o.s.w.s.m.m.a.HttpEntityMethodProcessor - Writing [[Question(questionId=88, type=single_choice, content=白兰地是通过蒸馏哪种饮料制成的？, options=A.啤酒,B.苹果汁,C.米酒,D.葡萄酒 (truncated)...]
+2024-01-20 16:26:56 [http-nio-8080-exec-4] DEBUG o.s.web.servlet.DispatcherServlet - Completed 200 OK

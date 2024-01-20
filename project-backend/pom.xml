@@ -20,6 +20,10 @@
         <java.version>21</java.version>
     </properties>
     <dependencies>
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-aop</artifactId>
+        </dependency>
         <!--    Swagger文档生成框架    -->
         <dependency>
             <groupId>org.springdoc</groupId>

@@ -1,6 +1,6 @@
 import axios from "axios";
 import {ElMessage} from "element-plus";
-
+import {useCountdownStore} from "@/stores/counter.js";
 const authItemName = "authorize"
 
 const accessHeader = () => {
@@ -75,6 +75,7 @@ function login(username, password, remember, success, failure = defaultFailure){
     }, (data) => {
         storeAccessToken(remember, data.token, data.expire)
         ElMessage.success(`登录成功，欢迎 ${data.username} 来到我们的系统`)
+        useCountdownStore().setUserId(data.id)
         success(data)
     }, failure)
 }
