@@ -132,3 +132,52 @@
 2024-01-20 16:26:56 [http-nio-8080-exec-4] DEBUG o.s.w.s.m.m.a.HttpEntityMethodProcessor - Using 'application/json', given [application/json, text/plain, */*] and supported [application/json, application/*+json]
 2024-01-20 16:26:56 [http-nio-8080-exec-4] DEBUG o.s.w.s.m.m.a.HttpEntityMethodProcessor - Writing [[Question(questionId=88, type=single_choice, content=白兰地是通过蒸馏哪种饮料制成的？, options=A.啤酒,B.苹果汁,C.米酒,D.葡萄酒 (truncated)...]
 2024-01-20 16:26:56 [http-nio-8080-exec-4] DEBUG o.s.web.servlet.DispatcherServlet - Completed 200 OK
+2024-01-20 16:28:33 [http-nio-8080-exec-7] DEBUG o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped to com.sapiece.question.controller.QuestionController#fetchQuestions()
+2024-01-20 16:28:33 [http-nio-8080-exec-8] DEBUG o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped to com.sapiece.question.controller.QuestionController#fetchQuestions()
+2024-01-20 16:28:33 [http-nio-8080-exec-8] DEBUG o.s.web.servlet.DispatcherServlet - GET "/api/question/fetch", parameters={}
+2024-01-20 16:28:33 [http-nio-8080-exec-8] DEBUG o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped to com.sapiece.question.controller.QuestionController#fetchQuestions()
+2024-01-20 16:28:33 [http-nio-8080-exec-8] DEBUG o.s.w.s.m.m.a.HttpEntityMethodProcessor - Using 'application/json', given [application/json, text/plain, */*] and supported [application/json, application/*+json]
+2024-01-20 16:28:33 [http-nio-8080-exec-8] DEBUG o.s.w.s.m.m.a.HttpEntityMethodProcessor - Writing [[Question(questionId=55, type=single_choice, content=里奥哈葡萄酒主要以哪种葡萄品种酿造？, options=A.霞多丽,B.丹魄,C.桑娇维塞,D (truncated)...]
+2024-01-20 16:28:33 [http-nio-8080-exec-8] DEBUG o.s.web.servlet.DispatcherServlet - Completed 200 OK
+2024-01-20 16:29:04 [http-nio-8080-exec-9] DEBUG o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped to com.sapiece.question.controller.QuestionController#fetchQuestions()
+2024-01-20 16:29:04 [http-nio-8080-exec-10] DEBUG o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped to com.sapiece.question.controller.QuestionController#fetchQuestions()
+2024-01-20 16:29:04 [http-nio-8080-exec-10] DEBUG o.s.web.servlet.DispatcherServlet - GET "/api/question/fetch", parameters={}
+2024-01-20 16:29:04 [http-nio-8080-exec-10] DEBUG o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped to com.sapiece.question.controller.QuestionController#fetchQuestions()
+2024-01-20 16:29:04 [http-nio-8080-exec-10] DEBUG o.s.w.s.m.m.a.HttpEntityMethodProcessor - Using 'application/json', given [application/json, text/plain, */*] and supported [application/json, application/*+json]
+2024-01-20 16:29:04 [http-nio-8080-exec-10] DEBUG o.s.w.s.m.m.a.HttpEntityMethodProcessor - Writing [[Question(questionId=72, type=single_choice, content=通常情况下，下列哪种葡萄酒会在瓶中进行二次发酵？, options=A.赤霞珠,B.香槟,C. (truncated)...]
+2024-01-20 16:29:04 [http-nio-8080-exec-10] DEBUG o.s.web.servlet.DispatcherServlet - Completed 200 OK
+2024-01-20 16:30:23 [http-nio-8080-exec-1] DEBUG o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped to com.sapiece.question.controller.QuestionController#fetchQuestions()
+2024-01-20 16:30:23 [http-nio-8080-exec-3] DEBUG o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped to com.sapiece.question.controller.QuestionController#fetchQuestions()
+2024-01-20 16:30:23 [http-nio-8080-exec-3] DEBUG o.s.web.servlet.DispatcherServlet - GET "/api/question/fetch", parameters={}
+2024-01-20 16:30:23 [http-nio-8080-exec-3] DEBUG o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped to com.sapiece.question.controller.QuestionController#fetchQuestions()
+2024-01-20 16:30:23 [http-nio-8080-exec-3] DEBUG o.s.w.s.m.m.a.HttpEntityMethodProcessor - Using 'application/json', given [application/json, text/plain, */*] and supported [application/json, application/*+json]
+2024-01-20 16:30:23 [http-nio-8080-exec-3] DEBUG o.s.w.s.m.m.a.HttpEntityMethodProcessor - Writing [[Question(questionId=56, type=single_choice, content=通常情况下，葡萄酒中的酸度是由哪种物质主导的？, options=A.单宁,B.酒石酸,C.酒 (truncated)...]
+2024-01-20 16:30:23 [http-nio-8080-exec-3] DEBUG o.s.web.servlet.DispatcherServlet - Completed 200 OK
+2024-01-20 16:30:51 [http-nio-8080-exec-4] DEBUG o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped to com.sapiece.question.controller.QuestionController#fetchQuestions()
+2024-01-20 16:30:51 [http-nio-8080-exec-5] DEBUG o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped to com.sapiece.question.controller.QuestionController#fetchQuestions()
+2024-01-20 16:30:51 [http-nio-8080-exec-5] DEBUG o.s.web.servlet.DispatcherServlet - GET "/api/question/fetch", parameters={}
+2024-01-20 16:30:51 [http-nio-8080-exec-5] DEBUG o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped to com.sapiece.question.controller.QuestionController#fetchQuestions()
+2024-01-20 16:30:51 [http-nio-8080-exec-5] DEBUG o.s.w.s.m.m.a.HttpEntityMethodProcessor - Using 'application/json', given [application/json, text/plain, */*] and supported [application/json, application/*+json]
+2024-01-20 16:30:51 [http-nio-8080-exec-5] DEBUG o.s.w.s.m.m.a.HttpEntityMethodProcessor - Writing [[Question(questionId=40, type=single_choice, content=通常情况下，香槟酒是由哪些葡萄品种混合酿造的？, options=A.赤霞珠和桑娇维塞,B.黑 (truncated)...]
+2024-01-20 16:30:51 [http-nio-8080-exec-5] DEBUG o.s.web.servlet.DispatcherServlet - Completed 200 OK
+2024-01-20 16:30:57 [http-nio-8080-exec-6] DEBUG o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped to com.sapiece.question.controller.QuestionController#fetchQuestions()
+2024-01-20 16:30:57 [http-nio-8080-exec-7] DEBUG o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped to com.sapiece.question.controller.QuestionController#fetchQuestions()
+2024-01-20 16:30:57 [http-nio-8080-exec-7] DEBUG o.s.web.servlet.DispatcherServlet - GET "/api/question/fetch", parameters={}
+2024-01-20 16:30:57 [http-nio-8080-exec-7] DEBUG o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped to com.sapiece.question.controller.QuestionController#fetchQuestions()
+2024-01-20 16:30:57 [http-nio-8080-exec-7] DEBUG o.s.w.s.m.m.a.HttpEntityMethodProcessor - Using 'application/json', given [application/json, text/plain, */*] and supported [application/json, application/*+json]
+2024-01-20 16:30:57 [http-nio-8080-exec-7] DEBUG o.s.w.s.m.m.a.HttpEntityMethodProcessor - Writing [[Question(questionId=63, type=single_choice, content=下列哪种葡萄酒被称为'夜之女王'，是德国著名的甜白葡萄酒？, options=A.雷司令,B. (truncated)...]
+2024-01-20 16:30:57 [http-nio-8080-exec-7] DEBUG o.s.web.servlet.DispatcherServlet - Completed 200 OK
+2024-01-20 16:31:00 [http-nio-8080-exec-8] DEBUG o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped to com.sapiece.question.controller.ExamResultController#loadUserTestData()
+2024-01-20 16:31:00 [http-nio-8080-exec-9] DEBUG o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped to com.sapiece.question.controller.ExamResultController#loadUserTestData()
+2024-01-20 16:31:00 [http-nio-8080-exec-9] DEBUG o.s.web.servlet.DispatcherServlet - GET "/api/test-data/user-test-data", parameters={}
+2024-01-20 16:31:00 [http-nio-8080-exec-9] DEBUG o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped to com.sapiece.question.controller.ExamResultController#loadUserTestData()
+2024-01-20 16:31:00 [http-nio-8080-exec-9] DEBUG o.s.w.s.m.m.a.HttpEntityMethodProcessor - Using 'application/json', given [application/json, text/plain, */*] and supported [application/json, application/*+json]
+2024-01-20 16:31:00 [http-nio-8080-exec-9] DEBUG o.s.w.s.m.m.a.HttpEntityMethodProcessor - Writing [[ExamResult(resultId=42, examId=1, userId=13, name=wangwu, userAnswers=id:88@白兰地是通过蒸馏哪种饮料制成的？@answer (truncated)...]
+2024-01-20 16:31:00 [http-nio-8080-exec-9] DEBUG o.s.web.servlet.DispatcherServlet - Completed 200 OK
+2024-01-20 16:31:03 [http-nio-8080-exec-10] DEBUG o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped to com.sapiece.question.controller.QuestionController#fetchQuestions()
+2024-01-20 16:31:03 [http-nio-8080-exec-2] DEBUG o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped to com.sapiece.question.controller.QuestionController#fetchQuestions()
+2024-01-20 16:31:03 [http-nio-8080-exec-2] DEBUG o.s.web.servlet.DispatcherServlet - GET "/api/question/fetch", parameters={}
+2024-01-20 16:31:03 [http-nio-8080-exec-2] DEBUG o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped to com.sapiece.question.controller.QuestionController#fetchQuestions()
+2024-01-20 16:31:03 [http-nio-8080-exec-2] DEBUG o.s.w.s.m.m.a.HttpEntityMethodProcessor - Using 'application/json', given [application/json, text/plain, */*] and supported [application/json, application/*+json]
+2024-01-20 16:31:03 [http-nio-8080-exec-2] DEBUG o.s.w.s.m.m.a.HttpEntityMethodProcessor - Writing [[Question(questionId=21, type=single_choice, content=夏布利产区以生产哪种类型的葡萄酒而闻名？, options=A.默洛,B.丽贝拉,C.霞多丽, (truncated)...]
+2024-01-20 16:31:03 [http-nio-8080-exec-2] DEBUG o.s.web.servlet.DispatcherServlet - Completed 200 OK

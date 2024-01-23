@@ -17,6 +17,7 @@ let questions=reactive([])
 //axios成功后的请求处理将获得的data封装到questions里面然后传递给子组件TestPage中
 function handleSuccess(data) {
   questions = data
+  console.log(questions)
 }
 function fetch() {
   examStarted.value=true

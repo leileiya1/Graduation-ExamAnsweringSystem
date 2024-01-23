@@ -11,10 +11,7 @@ const store = useCountdownStore();
 function userLogout() {
   logout(() => router.push('/'))
 }
-
 const username = store.username
-console.log(store.userId, store.username)
-
 </script>
 
 <template>

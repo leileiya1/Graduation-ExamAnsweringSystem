@@ -8,7 +8,6 @@ import com.sapiece.question.service.QuestionService;
 import com.sapiece.util.Const;
 import jakarta.annotation.Resource;
 import org.springframework.stereotype.Service;
-import org.springframework.transaction.annotation.Transactional;
 
 import java.util.*;
 import java.util.stream.Collectors;
