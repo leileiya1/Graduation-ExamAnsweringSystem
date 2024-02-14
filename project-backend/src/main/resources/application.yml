@@ -11,27 +11,27 @@ spring:
     username: 17685219818@163.com
     password: MLIYLUDOXPUILIFU
   rabbitmq:
-    addresses: 192.168.100.128
+    addresses: 192.168.100.129
     username: admin
-    password: admin
+    password: 123
     virtual-host: /
     port: 5672
 
   datasource:
     driver-class-name: com.mysql.cj.jdbc.Driver
-    url: jdbc:mysql://192.168.100.128:3306/graduation_design
+    url: jdbc:mysql://192.168.100.129:3306/graduation_design
     username: root
-    password: 159357
+    password: SAPiece@zll9
   security:
     jwt:
       key: abc1234
       expire-time: 5
   data:
     redis:
-      url: redis://159357@192.168.100.128:6379
+      url: redis://159357@192.168.100.129:6379
       host: 6379
       username: root
-      password: 159357
+      password: 1379qazzll
 mybatis-plus:
   type-aliases-package: com.sapiece.entity.dto
   mapper-locations: classpath:mybatis-plus/mapping/*.xml

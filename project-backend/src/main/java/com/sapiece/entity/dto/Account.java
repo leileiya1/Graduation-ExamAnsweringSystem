@@ -31,5 +31,4 @@ public class Account {
     private String phone;
     private Integer age;
     private LocalDate registerTime;
-    private byte[] avatar; // BLOB字段用户头像
 }

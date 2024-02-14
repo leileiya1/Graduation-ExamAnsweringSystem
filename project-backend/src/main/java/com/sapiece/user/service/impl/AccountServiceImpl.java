@@ -101,7 +101,7 @@ public class AccountServiceImpl extends ServiceImpl<AccountMapper, Account> impl
         if (this.existsAccountByUsername(username)) return "该用户名已被他人使用，换一个吧";
         String password = passwordEncoder.encode(info.getPassword());
         Account account = new Account(null, info.getUsername(),
-                password, Const.ROLE_DEFAULT, email, info.getIphone(), info.getAge(), LocalDate.now(),null);
+                password, Const.ROLE_DEFAULT, email, info.getIphone(), info.getAge(), LocalDate.now());
         if (!this.save(account)) {
             return "内部错误，注册失败";
         } else {

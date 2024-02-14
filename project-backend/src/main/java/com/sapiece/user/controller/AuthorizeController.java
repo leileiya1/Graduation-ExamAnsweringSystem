@@ -17,7 +17,7 @@ import org.springframework.web.bind.annotation.*;
 
 import java.util.function.Supplier;
 
-/**
+/*
  * @Author SAPiece
  * @Create 2023-12-29 13:51
  * @Package com.sapiece.user.controller
@@ -50,8 +50,6 @@ public class AuthorizeController {
     public RestBean<Void> askVerifyCode(@RequestParam @Email String email,
                                         @RequestParam @Pattern(regexp = "(register|reset)") String type,
                                         HttpServletRequest request) {
-        /*return this.messageHandle(() ->
-                accountService.registerEmailVerifyCode(type, String.valueOf(email), request.getRemoteAddr()));*/
         String message = accountService.registerEmailVerifyCode(type, email, request.getRemoteAddr());
         return message == null ? RestBean.success() : RestBean.failure(400, message);
     }

@@ -125,7 +125,7 @@ const downloadQuestionsAndAnswersAsZip = async () => {
       >
     </div>
     <template #reference>
-      <el-button @click="visible = true">下载试题</el-button>
+      <el-button @click="visible = true" type="primary">下载试题</el-button>
     </template>
   </el-popover>
 </template>

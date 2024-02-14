@@ -78,7 +78,7 @@ public class QuestionServiceImpl extends ServiceImpl<QuestionMapper, Question> i
      * 后面传入是否考试字段进行打乱不能相同直接加一个判断把isSelected设置为true即可
      */
     public void markQuestionsAsSelected(List<Question> questions) {
-        List<Integer> questionIds = questions.stream().map(Question::getQuestionId).collect(Collectors.toList());
+        List<Integer> questionIds = questions.stream().map(Question::getQuestionId).toList();
 //        if (!questionIds.isEmpty()) {
 //            questionMapper.batchUpdateIsSelected(questionIds,false);
 //        }

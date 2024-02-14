@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Configuration status="WARN">
+    <Appenders>
+        <!-- 用户操作日志记录器 -->
+        <File name="UserLogFile" fileName="D:/idea/GraduationDesign/user.log" append="true">
+            <PatternLayout>
+                <Pattern>%d [%t] %-5level %logger{36} - %msg%n</Pattern>
+            </PatternLayout>
+        </File>
+    </Appenders>
+    <Loggers>
+        <!-- 用户操作日志记录器 -->
+        <Logger name="UserOperationLogger" level="info" additivity="false">
+            <AppenderRef ref="UserLogFile"/>
+        </Logger>
+        <Root level="error">
+            <AppenderRef ref="Console"/>
+        </Root>
+    </Loggers>
+</Configuration>

@@ -8,6 +8,8 @@ import jakarta.annotation.Resource;
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
+import org.springframework.security.core.context.SecurityContext;
+import org.springframework.security.core.context.SecurityContextHolder;
 
 @SpringBootTest
 class ProjectBackendApplicationTests {
@@ -22,7 +24,8 @@ class ProjectBackendApplicationTests {
 
     @Test
     void test() {
-
+        SecurityContext context = SecurityContextHolder.getContext();
+        System.out.println(context);
     }
 
 }
